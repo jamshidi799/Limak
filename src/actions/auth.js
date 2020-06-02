@@ -1,13 +1,13 @@
-import { REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS } from './types';
-import axios from 'axios';
-import { SERVER_ADDRESS } from '../consts';
+import { REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS } from "./types";
+import axios from "axios";
+import { SERVER_ADDRESS } from "../consts";
 
 // REGISTER USER
-export const register = user => dispatch => {
+export const register = (user) => (dispatch) => {
   // Headers
   const config = {
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
   };
 
@@ -15,13 +15,13 @@ export const register = user => dispatch => {
 
   axios
     .post(`${SERVER_ADDRESS}/api/accounts/signup`, body, config)
-    .then(res => {
+    .then((res) => {
       dispatch({
         type: REGISTER_SUCCESS,
         payload: res.data,
       });
     })
-    .catch(err => {
+    .catch((err) => {
       dispatch({
         // type: REGISTER_FAIL,
         type: REGISTER_SUCCESS,
@@ -30,11 +30,11 @@ export const register = user => dispatch => {
     });
 };
 
-export const login = (username, password) => dispatch => {
+export const login = (username, password) => (dispatch) => {
   // Headers
   const config = {
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
   };
 
@@ -43,17 +43,37 @@ export const login = (username, password) => dispatch => {
 
   axios
     .post(`${SERVER_ADDRESS}/api/accounts/login`, body, config)
-    .then(res => {
+    .then((res) => {
       console.log(res.data);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data,
       });
     })
-    .catch(err => {
+    .catch((err) => {
       dispatch({
         // type: LOGIN_FAIL,
-        type: 'default',
+        type: "default",
       });
     });
+};
+
+// Setup config with token - helper function
+export const tokenConfig = (getState) => {
+  // Get token from state
+  const token = getState().auth.token;
+
+  // Headers
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  // If token, add to headers config
+  if (token) {
+    config.headers["Authorization"] = `Token ${token}`;
+  }
+
+  return config;
 };
