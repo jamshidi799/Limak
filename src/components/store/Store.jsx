@@ -6,14 +6,15 @@ import Filter from "./Filter";
 
 const Store = () => {
   const cloths = useSelector((state) => state.cloth.list);
-  console.log(cloths);
   return (
-    <div className="container">
-      <div className="col-md-9">
-        <ClothContainer cloths={cloths} />
-      </div>
-      <div className="col-md-3">
-        <Filter />
+    <div className="container-fluid m-3 mt-5">
+      <div className="row">
+        <div className="col-md-9">
+          <ClothContainer cloths={cloths} />
+        </div>
+        <div className="col-md-3">
+          <Filter />
+        </div>
       </div>
     </div>
   );

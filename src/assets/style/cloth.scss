@@ -1,0 +1,17 @@
+.wrapper {
+  border: 3px solid yellow;
+  padding: 7px;
+  .cloth-card {
+    border: 1px solid yellow;
+    img {
+      width: 100%;
+    }
+  }
+  .cloth-dsc {
+    background-color: yellow;
+    // max-width: 20vw;
+    height: 30vh;
+    padding: 10px;
+    padding-left: 20px;
+  }
+}
