@@ -1,14 +1,15 @@
-import React from 'react';
-import './App.scss';
-import store from './store';
-import { Provider } from 'react-redux';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from "react";
+import "./App.scss";
+import store from "./store";
+import { Provider } from "react-redux";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import HomePage from './components/landing/HomePage';
-import Signin from './components/auth/Signin';
-import Signup from './components/auth/Signup';
-import Navbar from './components/common/Navbar';
-import Footer from './components/common/Footer';
+import HomePage from "./components/landing/HomePage";
+import Signin from "./components/auth/Signin";
+import Signup from "./components/auth/Signup";
+import Navbar from "./components/common/Navbar";
+import Footer from "./components/common/Footer";
+import Store from "./components/store/Store";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/register" component={Signup} />
           <Route exact path="/login" component={Signin} />
+          <Route exact path="/store" component={Store} />
+          <Route exact path="/cloth/:id" component={Signin} />
         </Switch>
         {/* <Footer /> */}
       </BrowserRouter>

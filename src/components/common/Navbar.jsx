@@ -34,6 +34,11 @@ class Navbar extends Component {
                 ثبت نام
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/store" className="nav-link">
+                فروشگاه
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import authReducer from "./authReducer";
-import clothReducer from "./clothReducer";
+import auth from "./authReducer";
+import cloth from "./clothReducer";
 
 const rootReducer = combineReducers({
-  authReducer,
-  clothReducer,
+  auth,
+  cloth,
 });
 
 export default rootReducer;

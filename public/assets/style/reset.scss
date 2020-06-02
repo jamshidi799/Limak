@@ -1,11 +1,12 @@
 @font-face {
   font-family: IRANYekan;
-  src: url('/assets/fonts/IRANYekan.ttf');
+  src: url("/assets/fonts/IRANYekan.ttf");
 }
 * {
   font-family: IRANYekan;
   text-align: right;
   direction: rtl;
+  background-color: black;
 }
 
 html,
