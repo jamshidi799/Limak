@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/store" component={Store} />
           <Route exact path="/cloth/:id" component={ClothPage} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </Provider>
   );

@@ -14,3 +14,35 @@ body {
   overflow-x: hidden;
   max-width: 100%;
 }
+
+a {
+  &:hover {
+    text-decoration: none;
+    color: yellow;
+  }
+  // &:visited {
+  //   color: white;
+  // }
+  // &:visited &:hover {
+  //   color: yellow;
+  // }
+}
+
+.footer {
+  width: 100%;
+  min-height: 20vh;
+  margin-top: 20px;
+  background-color: black;
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    a {
+      color: yellow;
+      display: inline-block;
+      padding: 15px;
+      font-size: x-large;
+    }
+  }
+}
