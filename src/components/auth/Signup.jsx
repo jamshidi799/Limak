@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Paper from "@material-ui/core/Paper";
 
 // {
 
@@ -21,6 +22,7 @@ class Signup extends Component {
     first_name: "",
     last_name: "",
     username: "",
+    email: "",
     password: "",
     repeat_password: "",
     profile: {
@@ -41,14 +43,14 @@ class Signup extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     const user = { ...this.state };
-    // this.props.login(userData);
+    this.props.login(user);
   };
 
   render() {
     return (
-      <div className="container form">
-        <div className="form-row">
-          <div className="form-group col-md-6">
+      <Paper elevation={3} className="container register-form">
+        <div className="form-row justify-content-md-around">
+          <div className="form-group col-md-5">
             <label>نام</label>
             <input
               type="text"
@@ -59,7 +61,7 @@ class Signup extends Component {
               onChange={this.onChange}
             />
           </div>
-          <div className="form-group col-md-6">
+          <div className="form-group col-md-5">
             <label>نام خانوادگی</label>
             <input
               type="text"
@@ -70,7 +72,7 @@ class Signup extends Component {
               onChange={this.onChange}
             />
           </div>
-          <div className="form-group col-md-6">
+          <div className="form-group col-md-5">
             <label>یوزرنیم</label>
             <input
               type="email"
@@ -81,7 +83,18 @@ class Signup extends Component {
               onChange={this.onChange}
             />
           </div>
-          <div className="form-group col-md-6">
+          <div className="form-group col-md-5">
+            <label>ایمیل</label>
+            <input
+              type="email"
+              className="form-control"
+              name="email"
+              value={this.state.email}
+              required
+              onChange={this.onChange}
+            />
+          </div>
+          <div className="form-group col-md-5">
             <label>پسورد</label>
             <input
               type="password"
@@ -92,7 +105,7 @@ class Signup extends Component {
               onChange={this.onChange}
             />
           </div>
-          <div className="form-group col-md-6">
+          <div className="form-group col-md-5">
             <label>تکرار پسورد</label>
             <input
               type="password"
@@ -103,37 +116,40 @@ class Signup extends Component {
               onChange={this.onChange}
             />
           </div>
+
+          <div className="form-group col-md-5">
+            <label>تاریخ تولد</label>
+            <input
+              type="text"
+              className="form-control"
+              name="birth_date"
+              value={this.state.profile.birth_date}
+              required
+              onChange={this.onProfileFieldsChange}
+            />
+          </div>
+          <div className="form-group col-md-5">
+            <label>تلفن</label>
+            <input
+              type="number"
+              className="form-control"
+              name="phone_number"
+              value={this.state.profile.phone_number}
+              required
+              onChange={this.onProfileFieldsChange}
+            />
+          </div>
         </div>
-        <div className="form-group col-md-6">
-          <label>تاریخ تولد</label>
-          <input
-            type="text"
-            className="form-control"
-            name="birth_date"
-            value={this.state.profile.birth_date}
-            required
-            onChange={this.onProfileFieldsChange}
-          />
+        <div className="d-flex justify-content-center mt-4">
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={this.onSubmit}
+          >
+            ثبت نام
+          </button>
         </div>
-        <div className="form-group col-md-6">
-          <label>تلفن</label>
-          <input
-            type="number"
-            className="form-control"
-            name="phone_number"
-            value={this.state.profile.phone_number}
-            required
-            onChange={this.onProfileFieldsChange}
-          />
-        </div>
-        <button
-          type="submit"
-          className="btn btn-primary"
-          onClick={this.onSubmit}
-        >
-          ثبت نام
-        </button>
-      </div>
+      </Paper>
     );
   }
 }
