@@ -1,19 +1,12 @@
 import {
-  GET_CLOTHS,
-  GET_CLOTH_BY_ID,
-  GET_SIZE,
-  GET_KIND,
-  GET_CATEGORY,
-  GET_COLOR,
+  ADD_TO_BUCKET,
+  DELTE_FROM_BUCKET,
+  GET_BUCKET,
+  PAY_BUCKET,
 } from "../actions/types";
 
 const initialState = {
-  clothe: {
-    id: 1,
-    name: "reza",
-    price: "asdf",
-  },
-  clothes: [
+  list: [
     {
       id: 1,
       name: "reza",
@@ -34,15 +27,20 @@ const initialState = {
 
 export default function (state = initialState, actions) {
   switch (actions.type) {
-    case GET_CLOTHS:
+    case GET_BUCKET:
       return {
         ...state,
-        clothes: actions.payload.results.clothes,
+        posts: actions.payload,
       };
-    case GET_CLOTH_BY_ID:
+    case DELTE_FROM_BUCKET:
       return {
         ...state,
-        clothe: actions.payload.clothe,
+        posts: state.posts.filter((post) => post.id !== actions.payload),
+      };
+    case ADD_TO_BUCKET:
+      return {
+        ...state,
+        posts: [...state.posts, actions.payload],
       };
     default:
       return { ...state };

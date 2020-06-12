@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-import cloth_img from "../../assets/img/hoody.jpeg";
 import ClothHorizentalContainer from "./ClothHorizentalContainer";
-import { useSelector } from "react-redux";
+import { addToBucket } from "../../actions/bucket";
+import { getClothById } from "../../actions/cloth";
+import cloth_img from "../../assets/img/hoody.jpeg";
 
 const ClothPage = (props) => {
-  const cloths = useSelector((state) => state.cloth.list);
+  const cloths = useSelector((state) => state.cloth.clothes);
+  const clothe = useSelector((state) => state.cloth.clothe);
+  const dispatch = useDispatch();
   const id = props.match.params.id;
-  console.log(id);
+
+  useEffect(() => {
+    dispatch(getClothById(id));
+  }, []);
+
+  const onBuy = () => {
+    dispatch(addToBucket(clothe.id));
+  };
+
   return (
     <div className="container mt-5">
       <div className="row">
@@ -26,6 +38,11 @@ const ClothPage = (props) => {
 
           <br />
           <div>1200000</div>
+          <div className="wrapper">
+            <div className="buy-btn" onClick={onBuy}>
+              <h5>اضافه به سبد خرید</h5>
+            </div>
+          </div>
         </div>
       </div>
       <br />

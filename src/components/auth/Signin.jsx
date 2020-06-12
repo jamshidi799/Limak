@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
   createMuiTheme,
   ThemeProvider,
@@ -7,6 +8,7 @@ import {
 import TextField from "@material-ui/core/TextField";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import LockIcon from "@material-ui/icons/Lock";
+import { login } from "../../actions/auth";
 
 // const theme = createMuiTheme({
 //   direction: "rtl", // Both here and <body dir="rtl">
@@ -40,16 +42,18 @@ const CssTextField = withStyles({
 
 export default function Direction() {
   const [state, setState] = useState({ username: "", password: "" });
+  const dispatch = useDispatch();
 
   const onChange = (e) => {
-    setState({ [e.target.name]: e.target.value });
+    setState({ ...state, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const { username, password } = this.state;
-    this.props.login(username, password);
+    const { username, password } = state;
+    dispatch(login(username, password));
   };
+
   return (
     <div className="container">
       <div className="form">
@@ -85,7 +89,9 @@ export default function Direction() {
             />
           </div>
         </div>
-        <button className="btn">ورود</button>
+        <button className="btn" onClick={onSubmit}>
+          ورود
+        </button>
       </div>
     </div>
   );

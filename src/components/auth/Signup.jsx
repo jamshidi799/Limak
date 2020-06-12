@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Paper from "@material-ui/core/Paper";
+import { register } from "../../actions/auth";
 
 // {
 
@@ -21,10 +22,9 @@ class Signup extends Component {
   state = {
     first_name: "",
     last_name: "",
-    username: "",
     email: "",
     password: "",
-    repeat_password: "",
+    password_repeat: "",
     profile: {
       birth_date: "",
       phone_number: "",
@@ -43,7 +43,8 @@ class Signup extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     const user = { ...this.state };
-    this.props.login(user);
+    console.log(user);
+    this.props.register(user);
   };
 
   render() {
@@ -158,4 +159,4 @@ const mapStateToProps = (state) => ({
   //   isAuthenticated: state.auth.isAuthenticated,
 });
 
-export default connect(mapStateToProps, {})(Signup);
+export default connect(mapStateToProps, { register })(Signup);
