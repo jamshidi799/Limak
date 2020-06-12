@@ -35,12 +35,12 @@ export default function (state = initialState, actions) {
     case DELTE_FROM_BUCKET:
       return {
         ...state,
-        posts: state.posts.filter((post) => post.id !== actions.payload),
+        list: state.list.filter((c) => c.id !== actions.payload),
       };
     case ADD_TO_BUCKET:
       return {
         ...state,
-        posts: [...state.posts, actions.payload],
+        list: [...state.list, actions.payload],
       };
     default:
       return { ...state };

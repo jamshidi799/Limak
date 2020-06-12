@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Bucket from "../bucket/Bucket";
 
 class Navbar extends Component {
   render() {
@@ -39,7 +40,20 @@ class Navbar extends Component {
                 فروشگاه
               </Link>
             </li>
+            <li>
+              <span
+                className="btn btn-warning"
+                type="button"
+                data-toggle="modal"
+                data-target="#exampleModalLong"
+              >
+                سبد
+              </span>
+            </li>
           </ul>
+        </div>
+        <div>
+          <Bucket />
         </div>
       </nav>
     );

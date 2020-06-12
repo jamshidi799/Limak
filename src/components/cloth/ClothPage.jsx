@@ -17,7 +17,7 @@ const ClothPage = (props) => {
   }, []);
 
   const onBuy = () => {
-    dispatch(addToBucket(clothe.id));
+    dispatch(addToBucket(clothe));
   };
 
   return (
@@ -31,8 +31,8 @@ const ClothPage = (props) => {
         <div className="col-md-3 mr-4">
           <div className="wrapper">
             <div className="cloth-dsc pl-4">
-              شسیبشسبیمنکتسشب شس کشسمیب سمتب کشس شکمستیب کش شمستشتبسیبتیبالتثقخ
-              هقث ضثصجقث افعثق ثقخ ای اقثخ قخه{" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi unde
+              illo, aut voluptatibus, vel saepe error ullam earum animi
             </div>
           </div>
 

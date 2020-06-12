@@ -23,25 +23,16 @@ export const getBucket = () => (dispatch, getState) => {
 
 // DELETE POST
 export const deleteFromBucket = (id) => (dispatch, getState) => {
-  axios
-    .delete(`http://localhost:8000/api/posts/${id}`, tokenConfig(getState))
-    .then((res) => {
-      dispatch({
-        type: DELTE_FROM_BUCKET,
-        payload: id,
-      });
-    });
+  dispatch({
+    type: DELTE_FROM_BUCKET,
+    payload: id,
+  });
 };
 
 // ADD POST
-export const addToBucket = (id) => (dispatch, getState) => {
-  axios
-    .post(`${SERVER_ADDRESS}/api/store/basket/add`, id, tokenConfig(getState))
-    .then((res) => {
-      dispatch({
-        type: ADD_TO_BUCKET,
-        payload: res.data,
-      });
-    })
-    .catch((error) => console.log(error));
+export const addToBucket = (cloth) => (dispatch, getState) => {
+  dispatch({
+    type: ADD_TO_BUCKET,
+    payload: cloth,
+  });
 };

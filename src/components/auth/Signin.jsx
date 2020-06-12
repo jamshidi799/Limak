@@ -57,37 +57,28 @@ export default function Direction() {
   return (
     <div className="container">
       <div className="form">
-        <div className="row p-3 field">
-          <div className="col-1 mt-3">
-            <AccountCircle />
-          </div>
-          <div className="col-10">
-            <CssTextField
-              fullWidth
-              id="outlined-basic"
-              label="نام کاربری"
-              name="username"
-              onChange={onChange}
-              value={state.username}
-            />
-          </div>
+        <div className="form-group">
+          <label>نام کاربری</label>
+          <input
+            type="text"
+            className="form-control"
+            name="username"
+            value={state.username}
+            required
+            onChange={onChange}
+          />
         </div>
 
-        <div className="row p-3 field">
-          <div className="col-1 mt-3">
-            <LockIcon />
-          </div>
-          <div className="col-10">
-            <CssTextField
-              fullWidth
-              type="password"
-              id="outlined-basic"
-              label="پسورد"
-              onChange={onChange}
-              name="password"
-              value={state.password}
-            />
-          </div>
+        <div className="form-group">
+          <label>پسورد</label>
+          <input
+            type="text"
+            className="form-control"
+            name="password"
+            value={state.password}
+            required
+            onChange={onChange}
+          />
         </div>
         <button className="btn" onClick={onSubmit}>
           ورود
