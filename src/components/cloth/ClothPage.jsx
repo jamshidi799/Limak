@@ -3,21 +3,22 @@ import { useSelector, useDispatch } from "react-redux";
 
 import ClothHorizentalContainer from "./ClothHorizentalContainer";
 import { addToBucket } from "../../actions/bucket";
-import { getClothById } from "../../actions/cloth";
+import { getClothById, getAllCloths } from "../../actions/cloth";
 import cloth_img from "../../assets/img/hoody.jpeg";
 
 const ClothPage = (props) => {
-  const cloths = useSelector((state) => state.cloth.clothes);
+  const cloths = useSelector((state) => state.cloth.clothes).slice(0, 4);
   const clothe = useSelector((state) => state.cloth.clothe);
   const dispatch = useDispatch();
   const id = props.match.params.id;
 
   useEffect(() => {
     dispatch(getClothById(id));
+    dispatch(getAllCloths());
   }, []);
 
   const onBuy = () => {
-    dispatch(addToBucket(clothe));
+    dispatch(addToBucket({ clothe, added: false }));
   };
 
   return (
@@ -30,10 +31,7 @@ const ClothPage = (props) => {
         </div>
         <div className="col-md-3 mr-4">
           <div className="wrapper">
-            <div className="cloth-dsc pl-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi unde
-              illo, aut voluptatibus, vel saepe error ullam earum animi
-            </div>
+            <div className="cloth-dsc pl-4">{clothe.description}</div>
           </div>
 
           <br />

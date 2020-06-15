@@ -6,11 +6,11 @@
   font-family: IRANYekan;
   text-align: right;
   direction: rtl;
-  // background-color: black;
 }
 
 html,
 body {
+  background-color: black;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -33,6 +33,8 @@ a {
   min-height: 20vh;
   margin-top: 20px;
   background-color: black;
+  position: sticky;
+  bottom: 0px;
   .footer-links {
     display: flex;
     flex-direction: column;

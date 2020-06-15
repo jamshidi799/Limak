@@ -1,7 +1,7 @@
 import axios from "axios";
 import { tokenConfig } from "./auth";
 import { SERVER_ADDRESS } from "../consts";
-import { GET_CATEGORY, GET_COLOR, GET_SIZE, GET_KIND } from "./types";
+import { GET_CATEGORY, GET_COLOR, GET_SIZE, GET_KIND, FILTER } from "./types";
 
 export const getSizes = () => (dispatch, getState) => {
   axios

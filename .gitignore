@@ -7,7 +7,6 @@
 /coverage
 
 # production
-/build
 
 # misc
 .DS_Store
@@ -22,7 +21,6 @@ yarn-error.log*
 
 .sass-cache
 npm-debug.log
-build
 .DS_Store
 src/config/FirebaseConfig.js
 npm-debug.log

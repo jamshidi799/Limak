@@ -4,11 +4,9 @@ import ClothCard from "./ClothCard";
 
 const ClothContainer = (props) => (
   <div className="container">
-    <div className="row">
+    <div className="row justify-content-around">
       {props.cloths.map((cloth) => (
-        <div className="col-md-4" key={cloth.id}>
-          <ClothCard cloth={cloth} />
-        </div>
+        <ClothCard cloth={cloth} key={cloth.id} />
       ))}
     </div>
   </div>

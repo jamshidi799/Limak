@@ -8,25 +8,25 @@ import {
   USER_LOADED,
   USER_LOADING,
   AUTHENTICATED,
-} from '../actions/types';
+} from "../actions/types";
 
 const initialState = {
-  token: localStorage.getItem('token'),
+  token: localStorage.getItem("token"),
   isAuthenticated: false,
   isLoading: false,
   user: {
     profile: {
-      university: 'sharif',
-      birth_date: '2020-01-01',
-      phone_number: '09111111111',
-      major: 'Computer engineering',
+      university: "sharif",
+      birth_date: "2020-01-01",
+      phone_number: "09111111111",
+      major: "Computer engineering",
     },
-    first_name: 'admin',
-    last_name: 'admin',
-    email: 'admin@admin.com',
-    password: '123456',
-    password_repeat: '123456',
-    username: 'mammad',
+    first_name: "admin",
+    last_name: "admin",
+    email: "admin@admin.com",
+    password: "123456",
+    password_repeat: "123456",
+    username: "mammad",
   },
 };
 
@@ -46,10 +46,11 @@ export default function (state = initialState, action) {
       };
     case LOGIN_SUCCESS:
     case REGISTER_SUCCESS:
-      localStorage.setItem('token', action.payload.token);
+      localStorage.setItem("token", action.payload.token);
+      console.log(action.payload.token);
       return {
         ...state,
-        ...action.payload,
+        token: action.payload.token,
         isAuthenticated: true,
         isLoading: false,
       };
@@ -57,7 +58,7 @@ export default function (state = initialState, action) {
     case LOGIN_FAIL:
     case LOGOUT_SUCCESS:
     case REGISTER_FAIL:
-      localStorage.removeItem('token');
+      localStorage.removeItem("token");
       return {
         ...state,
         token: null,

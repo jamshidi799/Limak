@@ -55,9 +55,9 @@ export default function Direction() {
   };
 
   return (
-    <div className="container">
-      <div className="form">
-        <div className="form-group">
+    <div className="container login-form">
+      <div className="form-row justify-content-md-around">
+        <div className="form-group col-12">
           <label>نام کاربری</label>
           <input
             type="text"
@@ -69,7 +69,7 @@ export default function Direction() {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-group col-12">
           <label>پسورد</label>
           <input
             type="text"

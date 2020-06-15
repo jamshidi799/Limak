@@ -1,4 +1,10 @@
-import { GET_CATEGORY, GET_COLOR, GET_SIZE, GET_KIND } from "../actions/types";
+import {
+  GET_CATEGORY,
+  GET_COLOR,
+  GET_SIZE,
+  GET_KIND,
+  FILTER,
+} from "../actions/types";
 
 const initialState = {
   colors: [
@@ -68,6 +74,10 @@ export default function (state = initialState, actions) {
       return {
         ...state,
         colors: actions.payload.clotheColor,
+      };
+    case FILTER:
+      return {
+        ...state,
       };
 
     default:

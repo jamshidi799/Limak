@@ -1,11 +1,25 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import BucketRow from "./BucketRow";
+import { addBucketToServer } from "../../actions/bucket";
 
 const Bucket = () => {
-  useEffect(() => {}, []);
-
   const bucket = useSelector((state) => state.bucket.list);
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    bucket.forEach((item) => {
+      const data = {
+        clothe_id: item.clothe.id,
+        color_name: item.clothe.information[0].color.name,
+        size_name: item.clothe.information[0].size.name,
+        count: 1,
+      };
+      console.log(data);
+      dispatch(addBucketToServer(data));
+    });
+  };
+
   return (
     <div
       className="modal fade"
@@ -23,8 +37,8 @@ const Bucket = () => {
           </div>
           <div className="modal-body">
             <ul className="list-group">
-              {bucket.map((cloth) => (
-                <BucketRow cloth={cloth} key={cloth.id} />
+              {bucket.map((e) => (
+                <BucketRow cloth={e.clothe} key={e.clothe.id} />
               ))}
             </ul>
           </div>
@@ -36,17 +50,12 @@ const Bucket = () => {
             >
               Close
             </button>
-            {/* <button
+
+            <button
               type="button"
-              class="btn btn-secondary"
-              data-container="body"
-              data-toggle="popover"
-              data-placement="top"
-              data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+              className="btn btn-warning"
+              onClick={onSubmit}
             >
-              Popover on top
-            </button> */}
-            <button type="button" className="btn btn-warning">
               submit
             </button>
           </div>

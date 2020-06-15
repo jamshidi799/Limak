@@ -2,8 +2,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Bucket from "../bucket/Bucket";
+import { logout } from "../../actions/auth";
 
 class Navbar extends Component {
+  logout = () => {
+    console.log("hhhhhhhh");
+    this.props.logout();
+  };
+
   render() {
     return (
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
@@ -29,6 +35,9 @@ class Navbar extends Component {
               <Link to="/login" className="nav-link">
                 ورود
               </Link>
+            </li>
+            <li className="nav-item" onClick={this.logout}>
+              <div className="nav-link">خروج</div>
             </li>
             <li className="nav-item">
               <Link to="/register" className="nav-link">
@@ -60,6 +69,11 @@ class Navbar extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => {
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+    // user: state.auth.user,
+  };
+};
 
-export default connect(mapStateToProps, {})(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);

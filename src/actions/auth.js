@@ -1,4 +1,9 @@
-import { REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS } from "./types";
+import {
+  REGISTER_SUCCESS,
+  REGISTER_FAIL,
+  LOGIN_SUCCESS,
+  LOGOUT_SUCCESS,
+} from "./types";
 import axios from "axios";
 import { SERVER_ADDRESS } from "../consts";
 
@@ -44,7 +49,7 @@ export const login = (username, password) => (dispatch) => {
   axios
     .post(`${SERVER_ADDRESS}/api/accounts/login`, body, config)
     .then((res) => {
-      console.log(res.data);
+      console.log(res.data.token);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data,
@@ -76,4 +81,18 @@ export const tokenConfig = (getState) => {
   }
 
   return config;
+};
+
+// LOGOUT USER
+export const logout = () => (dispatch, getState) => {
+  axios
+    .post(`${SERVER_ADDRESS}/api/accounts/logout`, {}, tokenConfig(getState))
+    .then((res) => {
+      dispatch({
+        type: LOGOUT_SUCCESS,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };

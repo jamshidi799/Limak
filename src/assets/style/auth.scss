@@ -1,22 +1,38 @@
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // justify-content: center;
-  // max-width: 700px;
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: lightgray;
-  margin-top: 20vh;
-  margin-bottom: 20vh;
-  padding: 30px;
-  padding: 40px;
-  button {
-    max-width: 100px;
-    background-color: yellow;
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.login-form {
+  background-color: $black;
+  color: $yellow;
+  border: 2px dashed $yellow;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 50px;
+  width: 50%;
+  max-width: 500px;
+  @include md {
+    width: 60%;
   }
-  .field {
-    min-width: 300px;
+  @include sm {
+    width: 80%;
+    padding: 20px;
+  }
+  input {
+    border: 2px dashed $yellow;
+    transition: border 1s;
+    &:focus {
+      border: 4px dashed $yellow;
+    }
+  }
+  button {
+    background-color: $black;
+    color: $yellow;
+    border: 2px solid $yellow;
+    &:hover {
+      background-color: $yellow;
+      color: $black;
+      border: 2px solid $yellow;
+    }
   }
 }
 
@@ -26,4 +42,24 @@
   margin-top: 40px;
   padding: 40px;
   max-width: 70%;
+  background-color: $black;
+  color: $yellow;
+  border: 2px dashed $yellow;
+  input {
+    border: 2px dashed $yellow;
+    transition: border 1s;
+    &:focus {
+      border: 4px dashed $yellow;
+    }
+  }
+  button {
+    background-color: $black;
+    color: $yellow;
+    border: 2px solid $yellow;
+    &:hover {
+      background-color: $yellow;
+      color: $black;
+      border: 2px solid $yellow;
+    }
+  }
 }

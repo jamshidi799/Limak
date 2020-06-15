@@ -49,7 +49,7 @@ class Signup extends Component {
 
   render() {
     return (
-      <Paper elevation={3} className="container register-form">
+      <div className="container register-form">
         <div className="form-row justify-content-md-around">
           <div className="form-group col-md-5">
             <label>نام</label>
@@ -150,7 +150,7 @@ class Signup extends Component {
             ثبت نام
           </button>
         </div>
-      </Paper>
+      </div>
     );
   }
 }

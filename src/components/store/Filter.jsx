@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { withStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import { grey } from "@material-ui/core/colors/grey";
+import { filter } from "../../actions/cloth";
 
 import {
   getSizes,
@@ -13,15 +13,18 @@ import {
   getKinds,
 } from "../../actions/store";
 
-// const GreenCheckbox = withStyles({
-//   root: {
-//     color: grey[400],
-//     "&$checked": {
-//       color: grey[600],
-//     },
-//   },
-//   checked: {},
-// })((props) => <Checkbox color="default" {...props} />);
+const GreenCheckbox = withStyles({
+  root: {
+    color: "black",
+    transform: "scale(0.8)",
+    margin: "0",
+    padding: "0",
+    "&$checked": {
+      color: "black",
+    },
+  },
+  checked: {},
+})((props) => <Checkbox color="default" {...props} />);
 
 const Filter = (props) => {
   const kinds = useSelector((state) => state.store.kinds);
@@ -42,23 +45,39 @@ const Filter = (props) => {
     else e.checked = !e.checked;
   };
 
+  const handleFilter = () => {
+    const kind = kinds.filter((k) => k.checked).map((k) => k.name);
+    const color = colors.filter((k) => k.checked).map((k) => k.name);
+    const size = sizes.filter((k) => k.checked).map((k) => k.name);
+    const category = categories.filter((k) => k.checked).map((k) => k.name);
+    console.log(kind, color, size);
+    const query = {
+      kind: [...kind],
+      color: [...color],
+      size: [...size],
+      category: [...category],
+    };
+    dispatch(filter(query));
+  };
+
   return (
     <div className="filter container-fluid">
+      <div>
+        <h1 className="text-center">فیلتر‌ها</h1>
+      </div>
       <div>
         <h3>نوع</h3>
         <div className="d-flex justify-content-start flex-wrap">
           {kinds.map((kind) => {
             return (
               <div key={kind.name} className="m-0">
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={kind.checked}
-                      onChange={() => handleChange(kind)}
-                    />
-                  }
-                  label={kind.name}
-                />
+                <div className="m-2">
+                  <span>{kind.name}</span>
+                  <GreenCheckbox
+                    checked={kind.checked}
+                    onChange={() => handleChange(kind)}
+                  />
+                </div>
               </div>
             );
           })}
@@ -70,15 +89,13 @@ const Filter = (props) => {
           {sizes.map((size) => {
             return (
               <div key={size.name}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={size.checked}
-                      onChange={() => handleChange(size)}
-                    />
-                  }
-                  label={size.name}
-                />
+                <div className="m-2">
+                  <span>{size.name}</span>
+                  <GreenCheckbox
+                    checked={size.checked}
+                    onChange={() => handleChange(size)}
+                  />
+                </div>
               </div>
             );
           })}
@@ -90,15 +107,13 @@ const Filter = (props) => {
           {colors.map((color) => {
             return (
               <div key={color.name}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={color.checked}
-                      onChange={() => handleChange(color)}
-                    />
-                  }
-                  label={color.name}
-                />
+                <div className="m-2">
+                  <span>{color.name}</span>
+                  <GreenCheckbox
+                    checked={color.checked}
+                    onChange={() => handleChange(color)}
+                  />
+                </div>
               </div>
             );
           })}
@@ -110,19 +125,24 @@ const Filter = (props) => {
           {categories.map((category) => {
             return (
               <div key={category.name}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={category.checked}
-                      onChange={() => handleChange(category)}
-                    />
-                  }
-                  label={category.name}
-                />
+                <div className="m-2">
+                  <span onClick={() => handleChange(category)}>
+                    {category.name}
+                  </span>
+                  <GreenCheckbox
+                    checked={category.checked}
+                    onChange={() => handleChange(category)}
+                  />
+                </div>
               </div>
             );
           })}
         </div>
+      </div>
+      <div className="d-flex justify-content-center">
+        <button className="btn btn-warning" onClick={handleFilter}>
+          جستجو
+        </button>
       </div>
     </div>
   );

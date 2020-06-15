@@ -6,23 +6,7 @@ import {
 } from "../actions/types";
 
 const initialState = {
-  list: [
-    {
-      id: 1,
-      name: "reza",
-      price: "asdf",
-    },
-    {
-      id: 2,
-      name: "reza",
-      price: "asdf",
-    },
-    {
-      id: 3,
-      name: "reza",
-      price: "asdf",
-    },
-  ],
+  list: [],
 };
 
 export default function (state = initialState, actions) {
@@ -30,7 +14,7 @@ export default function (state = initialState, actions) {
     case GET_BUCKET:
       return {
         ...state,
-        posts: actions.payload,
+        list: actions.payload,
       };
     case DELTE_FROM_BUCKET:
       return {

@@ -7,8 +7,8 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer container-fluid">
-        <div className="row">
-          <div className="col-md-6 footer-links">
+        <div className="row justify-content-center">
+          <div className="col-md-6 col-lg-7 col-xl-7 footer-links">
             <div className="row">
               <a href="/">اینستا</a>
               <a href="/">تلگرام</a>
@@ -20,7 +20,7 @@ class Footer extends Component {
               <a href="/">درباره ما</a>
             </div>
           </div>
-          <div className="col-md-5">
+          <div className="col-md-5 col-lg-4 col-xl-4">
             <img src={img} alt="" />
           </div>
         </div>

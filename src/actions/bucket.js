@@ -36,3 +36,19 @@ export const addToBucket = (cloth) => (dispatch, getState) => {
     payload: cloth,
   });
 };
+
+export const addBucketToServer = (cloth) => (dispatch, getState) => {
+  axios
+    .post(
+      `${SERVER_ADDRESS}/api/store/basket/add`,
+      cloth,
+      tokenConfig(getState)
+    )
+    .then((res) => {
+      return dispatch({
+        type: GET_BUCKET,
+        payload: res.data,
+      });
+    })
+    .catch((err) => console.log(err));
+};

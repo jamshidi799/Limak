@@ -1,10 +1,20 @@
 .wrapper {
   border: 3px solid yellow;
   padding: 7px;
+  width: 100%;
   .cloth-card {
     border: 1px solid yellow;
+    position: relative;
     img {
       width: 100%;
+    }
+    .price {
+      position: absolute;
+      bottom: 10px;
+      font-size: 2rem;
+      width: 100%;
+      text-align: center;
+      color: $yellow;
     }
   }
   .cloth-dsc {
@@ -13,6 +23,8 @@
     height: 30vh;
     padding: 10px;
     padding-left: 20px;
+    text-align: justify;
+    overflow: auto;
   }
 }
 
