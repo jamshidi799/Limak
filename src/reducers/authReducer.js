@@ -11,6 +11,7 @@ import {
 } from "../actions/types";
 
 const initialState = {
+  // token: undefined,
   token: localStorage.getItem("token"),
   isAuthenticated: false,
   isLoading: false,
@@ -47,7 +48,6 @@ export default function (state = initialState, action) {
     case LOGIN_SUCCESS:
     case REGISTER_SUCCESS:
       localStorage.setItem("token", action.payload.token);
-      console.log(action.payload.token);
       return {
         ...state,
         token: action.payload.token,

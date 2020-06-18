@@ -54,3 +54,5 @@ public/uploads
 cypress/screenshots/
 cypress/videos/
 cacert
+
+devBuild

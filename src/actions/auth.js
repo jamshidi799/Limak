@@ -3,6 +3,7 @@ import {
   REGISTER_FAIL,
   LOGIN_SUCCESS,
   LOGOUT_SUCCESS,
+  AUTHENTICATED,
 } from "./types";
 import axios from "axios";
 import { SERVER_ADDRESS } from "../consts";
@@ -49,7 +50,6 @@ export const login = (username, password) => (dispatch) => {
   axios
     .post(`${SERVER_ADDRESS}/api/accounts/login`, body, config)
     .then((res) => {
-      console.log(res.data.token);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data,
@@ -96,3 +96,6 @@ export const logout = () => (dispatch, getState) => {
       console.log(err);
     });
 };
+
+export const authenticate = () => (dispatch) =>
+  dispatch({ type: AUTHENTICATED });

@@ -11,7 +11,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@font-face {\n  font-family: IRANYekan;\n  src: url(\"/assets/fonts/IRANYekan.ttf\"); }\n\n* {\n  font-family: IRANYekan;\n  text-align: right;\n  direction: rtl; }\n\nhtml,\nbody {\n  background-color: black;\n  overflow-x: hidden;\n  max-width: 100%; }\n\na:hover {\n  text-decoration: none;\n  color: yellow; }\n\n.footer {\n  width: 100%;\n  min-height: 20vh;\n  margin-top: 20px;\n  background-color: black;\n  position: sticky;\n  bottom: 0px; }\n  .footer .footer-links {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin-right: 20px; }\n    .footer .footer-links a {\n      color: yellow;\n      display: inline-block;\n      padding: 15px;\n      font-size: x-large; }\n\n.login-form {\n  background-color: black;\n  color: yellow;\n  border: 2px dashed yellow;\n  margin: 0 auto;\n  margin-top: 40px;\n  padding: 50px;\n  width: 50%;\n  max-width: 500px; }\n  @media screen and (max-width: 768px) {\n    .login-form {\n      width: 60%; } }\n  @media screen and (max-width: 576px) {\n    .login-form {\n      width: 80%;\n      padding: 20px; } }\n  .login-form input {\n    border: 2px dashed yellow;\n    transition: border 1s; }\n    .login-form input:focus {\n      border: 4px dashed yellow; }\n  .login-form button {\n    background-color: black;\n    color: yellow;\n    border: 2px solid yellow; }\n    .login-form button:hover {\n      background-color: yellow;\n      color: black;\n      border: 2px solid yellow; }\n\n.register-form {\n  margin-right: 15%;\n  margin-left: 15%;\n  margin-top: 40px;\n  padding: 40px;\n  max-width: 70%;\n  background-color: black;\n  color: yellow;\n  border: 2px dashed yellow; }\n  .register-form input {\n    border: 2px dashed yellow;\n    transition: border 1s; }\n    .register-form input:focus {\n      border: 4px dashed yellow; }\n  .register-form button {\n    background-color: black;\n    color: yellow;\n    border: 2px solid yellow; }\n    .register-form button:hover {\n      background-color: yellow;\n      color: black;\n      border: 2px solid yellow; }\n\n.wrapper {\n  border: 3px solid yellow;\n  padding: 7px;\n  width: 100%; }\n  .wrapper .cloth-card {\n    border: 1px solid yellow;\n    position: relative; }\n    .wrapper .cloth-card img {\n      width: 100%; }\n    .wrapper .cloth-card .price {\n      position: absolute;\n      bottom: 10px;\n      font-size: 2rem;\n      width: 100%;\n      text-align: center;\n      color: yellow; }\n  .wrapper .cloth-dsc {\n    background-color: yellow;\n    height: 30vh;\n    padding: 10px;\n    padding-left: 20px;\n    text-align: justify;\n    overflow: auto; }\n\n.cloth-card-vertical {\n  position: relative;\n  color: white; }\n  .cloth-card-vertical img {\n    vertical-align: top;\n    width: 100%;\n    height: 100%; }\n  .cloth-card-vertical .hover-effect {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    height: 50%;\n    width: 100%;\n    opacity: 0;\n    font-size: 70px; }\n  .cloth-card-vertical:hover .hover-effect {\n    transition: all 0.5s;\n    -webkit-transition: all 0.5s;\n    opacity: 0.7;\n    background-color: black; }\n\n.buy-btn {\n  cursor: pointer; }\n\n.banner .carousel-inner {\n  width: 100%; }\n  .banner .carousel-inner img {\n    height: 95vh;\n    width: 100%; }\n\n.filter {\n  background-color: yellow;\n  padding: 20px;\n  margin: 10px;\n  height: 100%; }\n\n.store-header {\n  display: flex;\n  justify-content: space-between;\n  color: white;\n  margin: 2rem 4rem; }\n  .store-header .wrapper {\n    border: 3px solid yellow;\n    padding: 3px; }\n    .store-header .wrapper .bucket-btn {\n      background-color: yellow;\n      color: black;\n      text-align: center;\n      height: 100%;\n      cursor: pointer; }\n  .store-header .badge {\n    display: block;\n    background-color: yellow;\n    color: black;\n    border-radius: 0;\n    height: 100%;\n    font-size: 1.1rem; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: IRANYekan;\n  src: url(\"/assets/fonts/IRANYekan.ttf\"); }\n\n* {\n  font-family: IRANYekan;\n  text-align: right;\n  direction: rtl; }\n\nhtml,\nbody {\n  background-color: black;\n  overflow-x: hidden;\n  max-width: 100%; }\n\na:hover {\n  text-decoration: none;\n  color: yellow; }\n\n.pointer {\n  cursor: pointer; }\n\n.footer {\n  width: 100%;\n  min-height: 20vh;\n  margin-top: 20px;\n  background-color: black;\n  position: sticky;\n  bottom: 0px; }\n  .footer .footer-links {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin-right: 20px; }\n    .footer .footer-links a {\n      color: yellow;\n      display: inline-block;\n      padding: 15px;\n      font-size: x-large; }\n\n.login-form {\n  background-color: black;\n  color: yellow;\n  border: 2px dashed yellow;\n  margin: 0 auto;\n  margin-top: 40px;\n  padding: 50px;\n  width: 50%;\n  max-width: 500px; }\n  @media screen and (max-width: 768px) {\n    .login-form {\n      width: 60%; } }\n  @media screen and (max-width: 576px) {\n    .login-form {\n      width: 80%;\n      padding: 20px; } }\n  .login-form input {\n    border: 2px dashed yellow;\n    transition: border 1s; }\n    .login-form input:focus {\n      border: 4px dashed yellow; }\n  .login-form button {\n    background-color: black;\n    color: yellow;\n    border: 2px solid yellow; }\n    .login-form button:hover {\n      background-color: yellow;\n      color: black;\n      border: 2px solid yellow; }\n\n.register-form {\n  margin-right: 15%;\n  margin-left: 15%;\n  margin-top: 40px;\n  padding: 40px;\n  max-width: 70%;\n  background-color: black;\n  color: yellow;\n  border: 2px dashed yellow; }\n  .register-form input {\n    border: 2px dashed yellow;\n    transition: border 1s; }\n    .register-form input:focus {\n      border: 4px dashed yellow; }\n  .register-form button {\n    background-color: black;\n    color: yellow;\n    border: 2px solid yellow; }\n    .register-form button:hover {\n      background-color: yellow;\n      color: black;\n      border: 2px solid yellow; }\n\n.cloth-page .cloth-dsc {\n  background-color: yellow;\n  height: 30vh;\n  padding: 10px;\n  padding-left: 20px;\n  text-align: justify;\n  overflow: auto; }\n\n.cloth-page img {\n  width: 100%;\n  height: 100%; }\n\n.cloth-page .clothe-price {\n  display: block;\n  border: 1px solid yellow;\n  text-align: center;\n  color: yellow; }\n\n.cloth-page .buy-btn {\n  cursor: pointer;\n  color: black;\n  background-color: yellow;\n  padding: 10px;\n  text-align: center; }\n\n.cloth-page .yellow {\n  color: yellow; }\n\n.cloth-page .banner {\n  font-size: 100px;\n  color: yellow;\n  margin: 15% auto;\n  letter-spacing: 10px;\n  transform: rotate(-45deg); }\n\n.cloth-card {\n  border: 1px solid yellow;\n  position: relative; }\n  .cloth-card img {\n    width: 100%;\n    height: 100%; }\n  .cloth-card .price {\n    position: absolute;\n    bottom: 10px;\n    font-size: 2rem;\n    width: 100%;\n    text-align: center;\n    color: yellow; }\n\n.wrapper {\n  border: 4px solid yellow;\n  padding: 4px; }\n\n.cloth-card-vertical {\n  position: relative;\n  color: white; }\n  .cloth-card-vertical img {\n    vertical-align: top;\n    width: 100%;\n    height: 100%; }\n  .cloth-card-vertical .hover-effect {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    height: 50%;\n    width: 100%;\n    opacity: 0;\n    font-size: 70px; }\n  .cloth-card-vertical:hover .hover-effect {\n    transition: all 0.5s;\n    -webkit-transition: all 0.5s;\n    opacity: 0.7;\n    background-color: black; }\n\n.scroll-horizenly {\n  overflow: auto;\n  flex-wrap: nowrap;\n  overflow-x: auto; }\n\n.banner .carousel-inner {\n  width: 100%; }\n  .banner .carousel-inner img {\n    height: 95vh;\n    width: 100%; }\n\n.filter {\n  background-color: yellow;\n  padding: 20px;\n  margin: 10px;\n  max-height: 80vh;\n  overflow: auto; }\n\n.store-header {\n  display: flex;\n  justify-content: space-between;\n  color: white;\n  margin: 2rem 4rem; }\n  .store-header .wrapper-store {\n    border: 3px solid yellow;\n    padding: 3px; }\n    .store-header .wrapper-store .bucket-btn {\n      background-color: yellow;\n      color: black;\n      text-align: center;\n      height: 100%;\n      cursor: pointer; }\n  .store-header .badge {\n    display: block;\n    background-color: yellow;\n    color: black;\n    border-radius: 0;\n    height: 100%;\n    font-size: 1.1rem; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -41,7 +41,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_common_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/common/Footer */ "./src/components/common/Footer.jsx");
 /* harmony import */ var _components_store_Store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/store/Store */ "./src/components/store/Store.jsx");
 /* harmony import */ var _components_cloth_ClothPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/cloth/ClothPage */ "./src/components/cloth/ClothPage.jsx");
+/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./actions/auth */ "./src/actions/auth.js");
 var _jsxFileName = "/home/mj/pr/limak/src/App.js";
+
+
 
 
 
@@ -61,28 +64,28 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 19,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 20,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 21,
       columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 22,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
@@ -92,7 +95,7 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 23,
       columnNumber: 11
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
@@ -102,7 +105,7 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 24,
       columnNumber: 11
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
@@ -112,17 +115,17 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 25,
       columnNumber: 11
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
     exact: true,
-    path: "/store",
+    path: "/store/:pagination",
     component: _components_store_Store__WEBPACK_IMPORTED_MODULE_10__["default"],
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 26,
       columnNumber: 11
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
@@ -132,14 +135,14 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 27,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Footer__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 29,
       columnNumber: 9
     }
   })));
@@ -208,7 +211,7 @@ if(true) {
 /*!*****************************!*\
   !*** ./src/actions/auth.js ***!
   \*****************************/
-/*! exports provided: register, login, tokenConfig, logout */
+/*! exports provided: register, login, tokenConfig, logout, authenticate */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -217,6 +220,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tokenConfig", function() { return tokenConfig; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "authenticate", function() { return authenticate; });
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./src/actions/types.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
@@ -259,7 +263,6 @@ const login = (username, password) => dispatch => {
     password
   });
   axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/accounts/login`, body, config).then(res => {
-    console.log(res.data.token);
     dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_0__["LOGIN_SUCCESS"],
       payload: res.data
@@ -298,6 +301,9 @@ const logout = () => (dispatch, getState) => {
     console.log(err);
   });
 };
+const authenticate = () => dispatch => dispatch({
+  type: _types__WEBPACK_IMPORTED_MODULE_0__["AUTHENTICATED"]
+});
 
 /***/ }),
 
@@ -340,16 +346,32 @@ const deleteFromBucket = id => (dispatch, getState) => {
   });
 }; // ADD POST
 
-const addToBucket = cloth => (dispatch, getState) => {
-  dispatch({
-    type: _types__WEBPACK_IMPORTED_MODULE_1__["ADD_TO_BUCKET"],
-    payload: cloth
+const addToBucket = data => (dispatch, getState) => {
+  const clothe = data.clothe;
+  const request = {
+    clothe_id: clothe.id,
+    color_name: clothe.information[0].color.name,
+    size_name: clothe.information[0].size.name,
+    count: 1
+  };
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_3__["SERVER_ADDRESS"]}/api/store/basket/add`, request, Object(_auth__WEBPACK_IMPORTED_MODULE_2__["tokenConfig"])(getState)).then(res => {
+    dispatch({
+      type: _types__WEBPACK_IMPORTED_MODULE_1__["ADD_TO_BUCKET"],
+      payload: { ...data,
+        added: true
+      }
+    });
+  }).catch(err => {
+    dispatch({
+      type: _types__WEBPACK_IMPORTED_MODULE_1__["ADD_TO_BUCKET"],
+      payload: data
+    });
   });
 };
-const addBucketToServer = cloth => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_3__["SERVER_ADDRESS"]}/api/store/basket/add`, cloth, Object(_auth__WEBPACK_IMPORTED_MODULE_2__["tokenConfig"])(getState)).then(res => {
+const addBucketToServer = clothe => (dispatch, getState) => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_3__["SERVER_ADDRESS"]}/api/store/basket/add`, clothe, Object(_auth__WEBPACK_IMPORTED_MODULE_2__["tokenConfig"])(getState)).then(res => {
     return dispatch({
-      type: _types__WEBPACK_IMPORTED_MODULE_1__["GET_BUCKET"],
+      type: _types__WEBPACK_IMPORTED_MODULE_1__["ADD_BUCKET_TO_SERVER"],
       payload: res.data
     });
   }).catch(err => console.log(err));
@@ -466,7 +488,7 @@ const getCategory = () => (dispatch, getState) => {
 /*!******************************!*\
   !*** ./src/actions/types.js ***!
   \******************************/
-/*! exports provided: REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, AUTH_ERROR, USER_LOADING, USER_LOADED, AUTHENTICATED, ADD_TO_BUCKET, DELTE_FROM_BUCKET, GET_BUCKET, PAY_BUCKET, GET_CLOTHS, GET_CLOTH_BY_ID, GET_SIZE, GET_KIND, GET_CATEGORY, GET_COLOR, FILTER */
+/*! exports provided: REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, AUTH_ERROR, USER_LOADING, USER_LOADED, AUTHENTICATED, ADD_TO_BUCKET, DELTE_FROM_BUCKET, GET_BUCKET, PAY_BUCKET, ADD_BUCKET_TO_SERVER, GET_CLOTHS, GET_CLOTH_BY_ID, GET_SIZE, GET_KIND, GET_CATEGORY, GET_COLOR, FILTER */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -484,6 +506,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DELTE_FROM_BUCKET", function() { return DELTE_FROM_BUCKET; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_BUCKET", function() { return GET_BUCKET; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PAY_BUCKET", function() { return PAY_BUCKET; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_BUCKET_TO_SERVER", function() { return ADD_BUCKET_TO_SERVER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_CLOTHS", function() { return GET_CLOTHS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_CLOTH_BY_ID", function() { return GET_CLOTH_BY_ID; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_SIZE", function() { return GET_SIZE; });
@@ -504,6 +527,7 @@ const ADD_TO_BUCKET = "ADD_TO_BUCKET";
 const DELTE_FROM_BUCKET = "DELTE_FROM_BUCKET";
 const GET_BUCKET = "GET_BUCKET";
 const PAY_BUCKET = "PAY_BUCKET";
+const ADD_BUCKET_TO_SERVER = "ADD_BUCKET_TO_SERVER";
 const GET_CLOTHS = "GET_CLOTHS";
 const GET_CLOTH_BY_ID = "GET_CLOTH_BY_ID";
 const GET_SIZE = "GET_SIZE";
@@ -589,6 +613,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Lock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Lock */ "./node_modules/@material-ui/icons/Lock.js");
 /* harmony import */ var _material_ui_icons_Lock__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Lock__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../actions/auth */ "./src/actions/auth.js");
+/* harmony import */ var _actions_bucket__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../actions/bucket */ "./src/actions/bucket.js");
 var _jsxFileName = "/home/mj/pr/limak/src/components/auth/Signin.jsx";
 
 
@@ -596,40 +621,15 @@ var _jsxFileName = "/home/mj/pr/limak/src/components/auth/Signin.jsx";
 
 
 
- // const theme = createMuiTheme({
-//   direction: "rtl", // Both here and <body dir="rtl">
-// });
 
-const CssTextField = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])({
-  root: {
-    "& label": {
-      right: "0px"
-    },
-    "& label.Mui-focused": {
-      color: "green",
-      right: "-50px"
-    },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: "green"
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "red"
-      },
-      "&:hover fieldset": {
-        borderColor: "yellow"
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "green"
-      }
-    }
-  }
-})(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3__["default"]);
+
 function Direction() {
   const [state, setState] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     username: "",
     password: ""
   });
+  const isAuthenticated = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.auth.isAuthenticated);
+  const bucket = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.bucket.list);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
 
   const onChange = e => {
@@ -647,12 +647,23 @@ function Direction() {
     dispatch(Object(_actions_auth__WEBPACK_IMPORTED_MODULE_6__["login"])(username, password));
   };
 
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    bucket.forEach(item => {
+      const data = {
+        clothe_id: item.clothe.id,
+        color_name: item.clothe.information[0].color.name,
+        size_name: item.clothe.information[0].size.name,
+        count: 1
+      };
+      dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_7__["addBucketToServer"])(data));
+    });
+  }, [isAuthenticated]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container login-form",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 44,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -660,7 +671,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 45,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -668,14 +679,14 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 46,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 47,
       columnNumber: 11
     }
   }, "\u0646\u0627\u0645 \u06A9\u0627\u0631\u0628\u0631\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -688,7 +699,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 48,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -696,14 +707,14 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 58,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 59,
       columnNumber: 11
     }
   }, "\u067E\u0633\u0648\u0631\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -716,7 +727,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 60,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -725,7 +736,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 69,
       columnNumber: 9
     }
   }, "\u0648\u0631\u0648\u062F")));
@@ -1489,31 +1500,23 @@ const ClothHorizentalContainer = props => {
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+    className: "row sscroll-horizenly",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
       columnNumber: 7
     }
-  }, props.cloths.map(cloth => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col",
-    key: cloth.id,
+  }, props.cloths.map((cloth, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClothCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    cloth: cloth,
+    key: i,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9,
       columnNumber: 11
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClothCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    cloth: cloth,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 13
-    }
-  })))));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ClothHorizentalContainer);
@@ -1532,12 +1535,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _ClothHorizentalContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ClothHorizentalContainer */ "./src/components/cloth/ClothHorizentalContainer.jsx");
-/* harmony import */ var _actions_bucket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/bucket */ "./src/actions/bucket.js");
-/* harmony import */ var _actions_cloth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/cloth */ "./src/actions/cloth.js");
-/* harmony import */ var _assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../assets/img/hoody.jpeg */ "./src/assets/img/hoody.jpeg");
-/* harmony import */ var _assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_uuid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-uuid */ "./node_modules/react-uuid/uuid.js");
+/* harmony import */ var react_uuid__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_uuid__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ClothHorizentalContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ClothHorizentalContainer */ "./src/components/cloth/ClothHorizentalContainer.jsx");
+/* harmony import */ var _actions_bucket__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/bucket */ "./src/actions/bucket.js");
+/* harmony import */ var _actions_cloth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/cloth */ "./src/actions/cloth.js");
+/* harmony import */ var _assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../assets/img/hoody.jpeg */ "./src/assets/img/hoody.jpeg");
+/* harmony import */ var _assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/home/mj/pr/limak/src/components/cloth/ClothPage.jsx";
+
 
 
 
@@ -1551,23 +1557,24 @@ const ClothPage = props => {
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
   const id = props.match.params.id;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_4__["getClothById"])(id));
-    dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_4__["getAllCloths"])());
+    dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_5__["getClothById"])(id));
+    dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_5__["getAllCloths"])());
   }, []);
 
   const onBuy = () => {
-    dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_3__["addToBucket"])({
+    dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_4__["addToBucket"])({
       clothe,
-      added: false
+      added: false,
+      id: react_uuid__WEBPACK_IMPORTED_MODULE_2___default()()
     }));
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container mt-5",
+    className: "container mt-5 cloth-page",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1575,7 +1582,7 @@ const ClothPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1583,32 +1590,24 @@ const ClothPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 9
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "cloth-card",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 11
-    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    src: _assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_6___default.a,
     alt: "",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29,
-      columnNumber: 13
+      columnNumber: 11
     }
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-3 mr-4",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 31,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1616,7 +1615,7 @@ const ClothPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 32,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1624,29 +1623,45 @@ const ClothPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 33,
       columnNumber: 13
     }
   }, clothe.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 36,
       columnNumber: 11
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 11
-    }
-  }, "1200000"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrapper",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 37,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "clothe-price",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 13
+    }
+  }, clothe.price, " \u062A\u0648\u0645\u0646")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 11
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrapper",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1655,58 +1670,66 @@ const ClothPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 42,
       columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 43,
       columnNumber: 15
     }
-  }, "\u0627\u0636\u0627\u0641\u0647 \u0628\u0647 \u0633\u0628\u062F \u062E\u0631\u06CC\u062F"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 7
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+  }, "\u0627\u0636\u0627\u0641\u0647 \u0628\u0647 \u0633\u0628\u062F \u062E\u0631\u06CC\u062F")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-4 banner",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47,
-      columnNumber: 7
+      columnNumber: 9
     }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48,
-      columnNumber: 7
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "\u0644\u06CC\u0645\u0627\u06A9")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49,
       columnNumber: 7
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "mb-4",
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50,
-      columnNumber: 9
+      columnNumber: 7
     }
-  }, "\u0627\u0632 \u0627\u06CC\u0646 \u0645\u062C\u0645\u0648\u0639\u0647"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClothHorizentalContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    cloths: cloths,
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "mb-4 yellow",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 9
+    }
+  }, "\u0627\u0632 \u0627\u06CC\u0646 \u0645\u062C\u0645\u0648\u0639\u0647"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClothHorizentalContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    cloths: cloths,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
       columnNumber: 9
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1714,23 +1737,23 @@ const ClothPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 56,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "mb-4",
+    className: "mb-4 yellow",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 57,
       columnNumber: 9
     }
-  }, "\u067E\u06CC\u0634\u0646\u0647\u0627\u062F \u0634\u0645\u0627 \u0633\u0631\u0648\u0631\u0627\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClothHorizentalContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "\u067E\u06CC\u0634\u0646\u0647\u0627\u062F \u0634\u0645\u0627 \u0633\u0631\u0648\u0631\u0627\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClothHorizentalContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     cloths: cloths,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 58,
       columnNumber: 9
     }
   })));
@@ -1904,7 +1927,6 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(...args);
 
     this.logout = () => {
-      console.log("hhhhhhhh");
       this.props.logout();
     };
   }
@@ -1915,7 +1937,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15,
+        lineNumber: 20,
         columnNumber: 7
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1924,7 +1946,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16,
+        lineNumber: 21,
         columnNumber: 9
       }
     }, "\u0644\u06CC\u0645\u0627\u06A9"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1935,7 +1957,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19,
+        lineNumber: 24,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1943,7 +1965,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 30,
         columnNumber: 11
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1952,7 +1974,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27,
+        lineNumber: 32,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1960,27 +1982,10 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28,
+        lineNumber: 33,
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      className: "nav-item",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29,
-        columnNumber: 13
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/",
-      className: "nav-link",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30,
-        columnNumber: 15
-      }
-    }, "\u0628\u0644\u0627\u06AF")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: "nav-item",
       __self: this,
       __source: {
@@ -1989,7 +1994,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/login",
+      to: "/",
       className: "nav-link",
       __self: this,
       __source: {
@@ -1997,30 +2002,37 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 35,
         columnNumber: 15
       }
-    }, "\u0648\u0631\u0648\u062F")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      className: "nav-item",
-      onClick: this.logout,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 39,
-        columnNumber: 13
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "nav-link",
+    }, "\u0628\u0644\u0627\u06AF")), this.props.isAuthenticated === false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 40,
         columnNumber: 15
       }
-    }, "\u062E\u0631\u0648\u062C")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: "nav-item",
       __self: this,
       __source: {
         fileName: _jsxFileName,
+        lineNumber: 41,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: "/login",
+      className: "nav-link",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
         lineNumber: 42,
-        columnNumber: 13
+        columnNumber: 19
+      }
+    }, "\u0648\u0631\u0648\u062F")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      className: "nav-item",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/register",
@@ -2028,31 +2040,48 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43,
-        columnNumber: 15
+        lineNumber: 47,
+        columnNumber: 19
       }
-    }, "\u062B\u0628\u062A \u0646\u0627\u0645")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      className: "nav-item",
+    }, "\u062B\u0628\u062A \u0646\u0627\u0645"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      className: "nav-item pointer",
+      onClick: this.logout,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
-        columnNumber: 13
+        lineNumber: 53,
+        columnNumber: 15
       }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/store",
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "nav-link",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 54,
+        columnNumber: 17
+      }
+    }, "\u062E\u0631\u0648\u062C")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      className: "nav-item",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: "/store/1",
+      className: "nav-link",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59,
         columnNumber: 15
       }
     }, "\u0641\u0631\u0648\u0634\u06AF\u0627\u0647")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52,
+        lineNumber: 63,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -2063,21 +2092,21 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 64,
         columnNumber: 15
       }
     }, "\u0633\u0628\u062F")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 75,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_bucket_Bucket__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
+        lineNumber: 76,
         columnNumber: 11
       }
     })));
@@ -2087,14 +2116,172 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 const mapStateToProps = state => {
   return {
-    isAuthenticated: state.auth.isAuthenticated // user: state.auth.user,
-
+    isAuthenticated: state.auth.isAuthenticated,
+    token: state.auth.token
   };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
-  logout: _actions_auth__WEBPACK_IMPORTED_MODULE_4__["logout"]
+  logout: _actions_auth__WEBPACK_IMPORTED_MODULE_4__["logout"],
+  authenticate: _actions_auth__WEBPACK_IMPORTED_MODULE_4__["authenticate"]
 })(Navbar));
+
+/***/ }),
+
+/***/ "./src/components/common/Pagination.jsx":
+/*!**********************************************!*\
+  !*** ./src/components/common/Pagination.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/home/mj/pr/limak/src/components/common/Pagination.jsx";
+
+
+const Pagination = props => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "Page navigation example",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    class: "pagination",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    class: "page-item",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    class: "page-link",
+    href: "#",
+    "aria-label": "Previous",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "aria-hidden": "true",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
+    }
+  }, "\xAB"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    class: "sr-only",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 13
+    }
+  }, "Previous"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    class: "page-item",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    class: "page-link",
+    href: "#",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 11
+    }
+  }, "1")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    class: "page-item",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    class: "page-link",
+    href: "#",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 11
+    }
+  }, "2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    class: "page-item",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    class: "page-link",
+    href: "#",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 11
+    }
+  }, "3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    class: "page-item",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    class: "page-link",
+    href: "#",
+    "aria-label": "Next",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "aria-hidden": "true",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 13
+    }
+  }, "\xBB"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    class: "sr-only",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 13
+    }
+  }, "Next")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Pagination);
 
 /***/ }),
 
@@ -2705,6 +2892,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Filter */ "./src/components/store/Filter.jsx");
 /* harmony import */ var _bucket_Bucket__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../bucket/Bucket */ "./src/components/bucket/Bucket.jsx");
 /* harmony import */ var _actions_cloth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/cloth */ "./src/actions/cloth.js");
+/* harmony import */ var _common_Pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../common/Pagination */ "./src/components/common/Pagination.jsx");
 var _jsxFileName = "/home/mj/pr/limak/src/components/store/Store.jsx";
 
 
@@ -2713,10 +2901,12 @@ var _jsxFileName = "/home/mj/pr/limak/src/components/store/Store.jsx";
 
 
 
-const Store = () => {
+
+const Store = props => {
   const cloths = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.cloth.clothes);
   const bucketLength = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.bucket.list.length);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+  const pagination = props.match.params.pagination;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_5__["getAllCloths"])());
   }, []);
@@ -2724,7 +2914,7 @@ const Store = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 21,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2732,35 +2922,35 @@ const Store = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 22,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 23,
       columnNumber: 9
     }
   }, "\u06A9\u0645\u067E\u0627\u0646\u06CC \u0644\u06CC\u0645\u0627\u06A9"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 24,
       columnNumber: 9
     }
   }, "\u0641\u0631\u0648\u0634\u06AF\u0627\u0647"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 25,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 26,
       columnNumber: 11
     }
   }, "\u0633\u0628\u062F \u062E\u0631\u06CC\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2768,30 +2958,11 @@ const Store = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 27,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-4 wrapper ml-1",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 13
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "badge",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 15
-    }
-  }, bucketLength)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-7 wrapper",
-    type: "button",
-    "data-toggle": "modal",
-    "data-target": "#exampleModalLong",
+    className: "col-4 wrapper-store ml-1",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2799,25 +2970,44 @@ const Store = () => {
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "badge",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 15
+    }
+  }, bucketLength)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-7 wrapper-store",
+    type: "button",
+    "data-toggle": "modal",
+    "data-target": "#exampleModalLong",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 13
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bucket-btn",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 37,
       columnNumber: 15
     }
   }, "\u0645\u0634\u0627\u0647\u062F\u0647")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 39,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_bucket_Bucket__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 40,
       columnNumber: 15
     }
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2825,7 +3015,7 @@ const Store = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 45,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2833,7 +3023,7 @@ const Store = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 46,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2841,7 +3031,7 @@ const Store = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 47,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cloth_ClothContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2849,25 +3039,41 @@ const Store = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 48,
       columnNumber: 13
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-sm-5 col-md-4 col-lg-2",
+    className: "col-12 col-sm-5 col-md-4 col-lg-3",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 50,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filter__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 51,
       columnNumber: 13
     }
-  })))));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row justify-content-center",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_common_Pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    page: pagination,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 11
+    }
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Store);
@@ -2945,6 +3151,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./src/actions/types.js");
 
 const initialState = {
+  // token: undefined,
   token: localStorage.getItem("token"),
   isAuthenticated: false,
   isLoading: false,
@@ -2980,7 +3187,6 @@ const initialState = {
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["LOGIN_SUCCESS"]:
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["REGISTER_SUCCESS"]:
       localStorage.setItem("token", action.payload.token);
-      console.log(action.payload.token);
       return { ...state,
         token: action.payload.token,
         isAuthenticated: true,
@@ -3040,6 +3246,11 @@ const initialState = {
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["ADD_TO_BUCKET"]:
       return { ...state,
         list: [...state.list, actions.payload]
+      };
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["ADD_BUCKET_TO_SERVER"]:
+      return { ...state,
+        list: state.list.map(b => b.id === actions.payload.id ? actions.payload : b)
       };
 
     default:
@@ -3368,5 +3579,5 @@ module.exports = __webpack_require__(/*! /home/mj/pr/limak/src/index.js */"./src
 
 /***/ })
 
-},[[1,"runtime-main",0]]]);
+},[[1,"runtime-main",1]]]);
 //# sourceMappingURL=main.chunk.js.map

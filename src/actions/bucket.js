@@ -3,6 +3,7 @@ import {
   ADD_TO_BUCKET,
   DELTE_FROM_BUCKET,
   GET_BUCKET,
+  ADD_BUCKET_TO_SERVER,
   PAY_BUCKET,
 } from "./types";
 import { tokenConfig } from "./auth";
@@ -30,23 +31,44 @@ export const deleteFromBucket = (id) => (dispatch, getState) => {
 };
 
 // ADD POST
-export const addToBucket = (cloth) => (dispatch, getState) => {
-  dispatch({
-    type: ADD_TO_BUCKET,
-    payload: cloth,
-  });
-};
-
-export const addBucketToServer = (cloth) => (dispatch, getState) => {
+export const addToBucket = (data) => (dispatch, getState) => {
+  const clothe = data.clothe;
+  const request = {
+    clothe_id: clothe.id,
+    color_name: clothe.information[0].color.name,
+    size_name: clothe.information[0].size.name,
+    count: 1,
+  };
   axios
     .post(
       `${SERVER_ADDRESS}/api/store/basket/add`,
-      cloth,
+      request,
+      tokenConfig(getState)
+    )
+    .then((res) => {
+      dispatch({
+        type: ADD_TO_BUCKET,
+        payload: { ...data, added: true },
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: ADD_TO_BUCKET,
+        payload: data,
+      });
+    });
+};
+
+export const addBucketToServer = (clothe) => (dispatch, getState) => {
+  axios
+    .post(
+      `${SERVER_ADDRESS}/api/store/basket/add`,
+      clothe,
       tokenConfig(getState)
     )
     .then((res) => {
       return dispatch({
-        type: GET_BUCKET,
+        type: ADD_BUCKET_TO_SERVER,
         payload: res.data,
       });
     })

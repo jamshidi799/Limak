@@ -5,11 +5,14 @@ import ClothContainer from "../cloth/ClothContainer";
 import Filter from "./Filter";
 import Bucket from "../bucket/Bucket";
 import { getAllCloths } from "../../actions/cloth";
+import Pagination from "../common/Pagination";
 
-const Store = () => {
+const Store = (props) => {
   const cloths = useSelector((state) => state.cloth.clothes);
   const bucketLength = useSelector((state) => state.bucket.list.length);
   const dispatch = useDispatch();
+
+  const pagination = props.match.params.pagination;
 
   useEffect(() => {
     dispatch(getAllCloths());
@@ -22,11 +25,11 @@ const Store = () => {
         <div>
           <h2>سبد خرید</h2>
           <div className="row">
-            <div className="col-4 wrapper ml-1">
+            <div className="col-4 wrapper-store ml-1">
               <div className="badge">{bucketLength}</div>
             </div>
             <div
-              className="col-7 wrapper"
+              className="col-7 wrapper-store"
               type="button"
               data-toggle="modal"
               data-target="#exampleModalLong"
@@ -44,9 +47,12 @@ const Store = () => {
           <div className="col-12 col-sm-7 col-md-8 col-lg-9">
             <ClothContainer cloths={cloths} />
           </div>
-          <div className="col-12 col-sm-5 col-md-4 col-lg-2">
+          <div className="col-12 col-sm-5 col-md-4 col-lg-3">
             <Filter />
           </div>
+        </div>
+        <div className="row justify-content-center">
+          <Pagination page={pagination} />
         </div>
       </div>
     </Fragment>

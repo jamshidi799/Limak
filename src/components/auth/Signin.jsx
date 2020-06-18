@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   createMuiTheme,
@@ -9,39 +9,13 @@ import TextField from "@material-ui/core/TextField";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import LockIcon from "@material-ui/icons/Lock";
 import { login } from "../../actions/auth";
-
-// const theme = createMuiTheme({
-//   direction: "rtl", // Both here and <body dir="rtl">
-// });
-
-const CssTextField = withStyles({
-  root: {
-    "& label": {
-      right: "0px",
-    },
-    "& label.Mui-focused": {
-      color: "green",
-      right: "-50px",
-    },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: "green",
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "red",
-      },
-      "&:hover fieldset": {
-        borderColor: "yellow",
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "green",
-      },
-    },
-  },
-})(TextField);
+import { addBucketToServer } from "../../actions/bucket";
 
 export default function Direction() {
   const [state, setState] = useState({ username: "", password: "" });
+
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const bucket = useSelector((state) => state.bucket.list);
   const dispatch = useDispatch();
 
   const onChange = (e) => {
@@ -53,6 +27,18 @@ export default function Direction() {
     const { username, password } = state;
     dispatch(login(username, password));
   };
+
+  useEffect(() => {
+    bucket.forEach((item) => {
+      const data = {
+        clothe_id: item.clothe.id,
+        color_name: item.clothe.information[0].color.name,
+        size_name: item.clothe.information[0].size.name,
+        count: 1,
+      };
+      dispatch(addBucketToServer(data));
+    });
+  }, [isAuthenticated]);
 
   return (
     <div className="container login-form">

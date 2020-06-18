@@ -20,12 +20,10 @@ a {
     text-decoration: none;
     color: yellow;
   }
-  // &:visited {
-  //   color: white;
-  // }
-  // &:visited &:hover {
-  //   color: yellow;
-  // }
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .footer {

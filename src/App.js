@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffects } from "react";
 import "./App.scss";
 import store from "./store";
+import { useSelector, useDispatch } from "react-redux";
 import { Provider } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -11,6 +12,7 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Store from "./components/store/Store";
 import ClothPage from "./components/cloth/ClothPage";
+import { authenticate } from "./actions/auth";
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/register" component={Signup} />
           <Route exact path="/login" component={Signin} />
-          <Route exact path="/store" component={Store} />
+          <Route exact path="/store/:pagination" component={Store} />
           <Route exact path="/cloth/:id" component={ClothPage} />
         </Switch>
         <Footer />

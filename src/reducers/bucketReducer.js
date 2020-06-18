@@ -3,6 +3,7 @@ import {
   DELTE_FROM_BUCKET,
   GET_BUCKET,
   PAY_BUCKET,
+  ADD_BUCKET_TO_SERVER,
 } from "../actions/types";
 
 const initialState = {
@@ -25,6 +26,13 @@ export default function (state = initialState, actions) {
       return {
         ...state,
         list: [...state.list, actions.payload],
+      };
+    case ADD_BUCKET_TO_SERVER:
+      return {
+        ...state,
+        list: state.list.map((b) =>
+          b.id === actions.payload.id ? actions.payload : b
+        ),
       };
     default:
       return { ...state };

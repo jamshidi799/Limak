@@ -1,12 +1,17 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Bucket from "../bucket/Bucket";
-import { logout } from "../../actions/auth";
+import { logout, authenticate } from "../../actions/auth";
 
 class Navbar extends Component {
+  // componentDidMount() {
+  //   if (this.props.token) {
+  //     this.props.authenticate();
+  //   }
+  // }
+
   logout = () => {
-    console.log("hhhhhhhh");
     this.props.logout();
   };
 
@@ -31,21 +36,27 @@ class Navbar extends Component {
                 بلاگ
               </Link>
             </li>
+            {this.props.isAuthenticated === false ? (
+              <Fragment>
+                <li className="nav-item">
+                  <Link to="/login" className="nav-link">
+                    ورود
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/register" className="nav-link">
+                    ثبت نام
+                  </Link>
+                </li>
+              </Fragment>
+            ) : (
+              <li className="nav-item pointer" onClick={this.logout}>
+                <div className="nav-link">خروج</div>
+              </li>
+            )}
+
             <li className="nav-item">
-              <Link to="/login" className="nav-link">
-                ورود
-              </Link>
-            </li>
-            <li className="nav-item" onClick={this.logout}>
-              <div className="nav-link">خروج</div>
-            </li>
-            <li className="nav-item">
-              <Link to="/register" className="nav-link">
-                ثبت نام
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/store" className="nav-link">
+              <Link to="/store/1" className="nav-link">
                 فروشگاه
               </Link>
             </li>
@@ -72,8 +83,8 @@ class Navbar extends Component {
 const mapStateToProps = (state) => {
   return {
     isAuthenticated: state.auth.isAuthenticated,
-    // user: state.auth.user,
+    token: state.auth.token,
   };
 };
 
-export default connect(mapStateToProps, { logout })(Navbar);
+export default connect(mapStateToProps, { logout, authenticate })(Navbar);
