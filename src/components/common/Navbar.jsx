@@ -18,9 +18,9 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-        <a className="navbar-brand" href="/">
+        <Link to="/" className="navbar-brand">
           لیماک
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

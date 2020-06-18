@@ -1,7 +1,14 @@
 .banner .carousel-inner {
   width: 100%;
+  margin-bottom: 20px;
   img {
     height: 95vh;
+    @include not-md {
+      height: 70vh;
+    }
+    @include not-sm {
+      height: 50vh;
+    }
     width: 100%;
   }
 }

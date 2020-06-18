@@ -46,6 +46,7 @@
   border: 1px solid yellow;
   position: relative;
   img {
+    min-height: 250px;
     width: 100%;
     height: 100%;
   }
@@ -66,8 +67,6 @@
 
 .cloth-card-vertical {
   position: relative;
-  // width: 300px;
-  // height: auto;
   color: white;
   img {
     vertical-align: top;

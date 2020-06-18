@@ -1,0 +1,326 @@
+@font-face {
+  font-family: IRANYekan;
+  src: url("/assets/fonts/IRANYekan.ttf");
+}
+
+* {
+  font-family: IRANYekan;
+  text-align: right;
+  direction: rtl;
+}
+
+html,
+body {
+  background-color: black;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+  color: yellow;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  min-height: 20vh;
+  margin-top: 20px;
+  background-color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+}
+
+.footer .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 20px;
+}
+
+.footer .footer-links a {
+  color: yellow;
+  display: inline-block;
+  padding: 15px;
+  font-size: x-large;
+}
+
+.login-form {
+  background-color: black;
+  color: yellow;
+  border: 2px dashed yellow;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 50px;
+  width: 50%;
+  max-width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  .login-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .login-form {
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+.login-form input {
+  border: 2px dashed yellow;
+  -webkit-transition: border 1s;
+  transition: border 1s;
+}
+
+.login-form input:focus {
+  border: 4px dashed yellow;
+}
+
+.login-form button {
+  background-color: black;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.login-form button:hover {
+  background-color: yellow;
+  color: black;
+  border: 2px solid yellow;
+}
+
+.register-form {
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 40px;
+  padding: 40px;
+  max-width: 70%;
+  background-color: black;
+  color: yellow;
+  border: 2px dashed yellow;
+}
+
+.register-form input {
+  border: 2px dashed yellow;
+  -webkit-transition: border 1s;
+  transition: border 1s;
+}
+
+.register-form input:focus {
+  border: 4px dashed yellow;
+}
+
+.register-form button {
+  background-color: black;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.register-form button:hover {
+  background-color: yellow;
+  color: black;
+  border: 2px solid yellow;
+}
+
+.cloth-page .cloth-dsc {
+  background-color: yellow;
+  height: 30vh;
+  padding: 10px;
+  padding-left: 20px;
+  text-align: justify;
+  overflow: auto;
+}
+
+.cloth-page img {
+  width: 100%;
+  height: 100%;
+}
+
+.cloth-page .clothe-price {
+  display: block;
+  border: 1px solid yellow;
+  text-align: center;
+  color: yellow;
+}
+
+.cloth-page .buy-btn {
+  cursor: pointer;
+  color: black;
+  background-color: yellow;
+  padding: 10px;
+  text-align: center;
+}
+
+.cloth-page .yellow {
+  color: yellow;
+}
+
+.cloth-page .banner {
+  font-size: 100px;
+  color: yellow;
+  margin: 15% auto;
+  letter-spacing: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.cloth-card {
+  border: 1px solid yellow;
+  position: relative;
+}
+
+.cloth-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.cloth-card .price {
+  position: absolute;
+  bottom: 10px;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  color: yellow;
+}
+
+.wrapper {
+  border: 4px solid yellow;
+  padding: 4px;
+}
+
+.cloth-card-vertical {
+  position: relative;
+  color: white;
+}
+
+.cloth-card-vertical img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+}
+
+.cloth-card-vertical .hover-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  opacity: 0;
+  font-size: 70px;
+}
+
+.cloth-card-vertical:hover .hover-effect {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  opacity: 0.7;
+  background-color: black;
+}
+
+.scroll-horizenly {
+  overflow: auto;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.banner .carousel-inner {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.banner .carousel-inner img {
+  height: 95vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .banner .carousel-inner img {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .banner .carousel-inner img {
+    height: 50vh;
+  }
+}
+
+.filter {
+  background-color: yellow;
+  padding: 20px;
+  margin: 10px;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.store-header {
+  color: white;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 576px) {
+  .store-header {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .store-header {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .store-header {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .store-header {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .store-header {
+    font-size: 90px;
+  }
+}
+
+.store-header .wrapper-store {
+  border: 3px solid yellow;
+  padding: 3px;
+}
+
+.store-header .wrapper-store .bucket-btn {
+  background-color: yellow;
+  color: black;
+  text-align: center;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.store-header .badge {
+  display: block;
+  background-color: yellow;
+  color: black;
+  border-radius: 0;
+  height: 100%;
+  font-size: 1em;
+}
+/*# sourceMappingURL=App.css.map */

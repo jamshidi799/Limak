@@ -61,7 +61,7 @@ const Filter = (props) => {
   };
 
   return (
-    <div className="filter container-fluid">
+    <div className="filter">
       <div>
         <h1 className="text-center">فیلتر‌ها</h1>
       </div>

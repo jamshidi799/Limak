@@ -11,7 +11,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@font-face {\n  font-family: IRANYekan;\n  src: url(\"/assets/fonts/IRANYekan.ttf\"); }\n\n* {\n  font-family: IRANYekan;\n  text-align: right;\n  direction: rtl; }\n\nhtml,\nbody {\n  background-color: black;\n  overflow-x: hidden;\n  max-width: 100%; }\n\na:hover {\n  text-decoration: none;\n  color: yellow; }\n\n.pointer {\n  cursor: pointer; }\n\n.footer {\n  width: 100%;\n  min-height: 20vh;\n  margin-top: 20px;\n  background-color: black;\n  position: sticky;\n  bottom: 0px; }\n  .footer .footer-links {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin-right: 20px; }\n    .footer .footer-links a {\n      color: yellow;\n      display: inline-block;\n      padding: 15px;\n      font-size: x-large; }\n\n.login-form {\n  background-color: black;\n  color: yellow;\n  border: 2px dashed yellow;\n  margin: 0 auto;\n  margin-top: 40px;\n  padding: 50px;\n  width: 50%;\n  max-width: 500px; }\n  @media screen and (max-width: 768px) {\n    .login-form {\n      width: 60%; } }\n  @media screen and (max-width: 576px) {\n    .login-form {\n      width: 80%;\n      padding: 20px; } }\n  .login-form input {\n    border: 2px dashed yellow;\n    transition: border 1s; }\n    .login-form input:focus {\n      border: 4px dashed yellow; }\n  .login-form button {\n    background-color: black;\n    color: yellow;\n    border: 2px solid yellow; }\n    .login-form button:hover {\n      background-color: yellow;\n      color: black;\n      border: 2px solid yellow; }\n\n.register-form {\n  margin-right: 15%;\n  margin-left: 15%;\n  margin-top: 40px;\n  padding: 40px;\n  max-width: 70%;\n  background-color: black;\n  color: yellow;\n  border: 2px dashed yellow; }\n  .register-form input {\n    border: 2px dashed yellow;\n    transition: border 1s; }\n    .register-form input:focus {\n      border: 4px dashed yellow; }\n  .register-form button {\n    background-color: black;\n    color: yellow;\n    border: 2px solid yellow; }\n    .register-form button:hover {\n      background-color: yellow;\n      color: black;\n      border: 2px solid yellow; }\n\n.cloth-page .cloth-dsc {\n  background-color: yellow;\n  height: 30vh;\n  padding: 10px;\n  padding-left: 20px;\n  text-align: justify;\n  overflow: auto; }\n\n.cloth-page img {\n  width: 100%;\n  height: 100%; }\n\n.cloth-page .clothe-price {\n  display: block;\n  border: 1px solid yellow;\n  text-align: center;\n  color: yellow; }\n\n.cloth-page .buy-btn {\n  cursor: pointer;\n  color: black;\n  background-color: yellow;\n  padding: 10px;\n  text-align: center; }\n\n.cloth-page .yellow {\n  color: yellow; }\n\n.cloth-page .banner {\n  font-size: 100px;\n  color: yellow;\n  margin: 15% auto;\n  letter-spacing: 10px;\n  transform: rotate(-45deg); }\n\n.cloth-card {\n  border: 1px solid yellow;\n  position: relative; }\n  .cloth-card img {\n    width: 100%;\n    height: 100%; }\n  .cloth-card .price {\n    position: absolute;\n    bottom: 10px;\n    font-size: 2rem;\n    width: 100%;\n    text-align: center;\n    color: yellow; }\n\n.wrapper {\n  border: 4px solid yellow;\n  padding: 4px; }\n\n.cloth-card-vertical {\n  position: relative;\n  color: white; }\n  .cloth-card-vertical img {\n    vertical-align: top;\n    width: 100%;\n    height: 100%; }\n  .cloth-card-vertical .hover-effect {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    height: 50%;\n    width: 100%;\n    opacity: 0;\n    font-size: 70px; }\n  .cloth-card-vertical:hover .hover-effect {\n    transition: all 0.5s;\n    -webkit-transition: all 0.5s;\n    opacity: 0.7;\n    background-color: black; }\n\n.scroll-horizenly {\n  overflow: auto;\n  flex-wrap: nowrap;\n  overflow-x: auto; }\n\n.banner .carousel-inner {\n  width: 100%; }\n  .banner .carousel-inner img {\n    height: 95vh;\n    width: 100%; }\n\n.filter {\n  background-color: yellow;\n  padding: 20px;\n  margin: 10px;\n  max-height: 80vh;\n  overflow: auto; }\n\n.store-header {\n  display: flex;\n  justify-content: space-between;\n  color: white;\n  margin: 2rem 4rem; }\n  .store-header .wrapper-store {\n    border: 3px solid yellow;\n    padding: 3px; }\n    .store-header .wrapper-store .bucket-btn {\n      background-color: yellow;\n      color: black;\n      text-align: center;\n      height: 100%;\n      cursor: pointer; }\n  .store-header .badge {\n    display: block;\n    background-color: yellow;\n    color: black;\n    border-radius: 0;\n    height: 100%;\n    font-size: 1.1rem; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: IRANYekan;\n  src: url(\"/assets/fonts/IRANYekan.ttf\"); }\n\n* {\n  font-family: IRANYekan;\n  text-align: right;\n  direction: rtl; }\n\nhtml,\nbody {\n  background-color: black;\n  overflow-x: hidden;\n  max-width: 100%; }\n\na:hover {\n  text-decoration: none;\n  color: yellow; }\n\n.pointer {\n  cursor: pointer; }\n\n.footer {\n  width: 100%;\n  min-height: 20vh;\n  margin-top: 20px;\n  background-color: black;\n  position: sticky;\n  bottom: 0px; }\n  .footer .footer-links {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin-right: 20px; }\n    .footer .footer-links a {\n      color: yellow;\n      display: inline-block;\n      padding: 15px;\n      font-size: x-large; }\n\n.login-form {\n  background-color: black;\n  color: yellow;\n  border: 2px dashed yellow;\n  margin: 0 auto;\n  margin-top: 40px;\n  padding: 50px;\n  width: 50%;\n  max-width: 500px; }\n  @media screen and (min-width: 768px) {\n    .login-form {\n      width: 60%; } }\n  @media screen and (min-width: 576px) {\n    .login-form {\n      width: 80%;\n      padding: 20px; } }\n  .login-form input {\n    border: 2px dashed yellow;\n    transition: border 1s; }\n    .login-form input:focus {\n      border: 4px dashed yellow; }\n  .login-form button {\n    background-color: black;\n    color: yellow;\n    border: 2px solid yellow; }\n    .login-form button:hover {\n      background-color: yellow;\n      color: black;\n      border: 2px solid yellow; }\n\n.register-form {\n  margin-right: 15%;\n  margin-left: 15%;\n  margin-top: 40px;\n  padding: 40px;\n  max-width: 70%;\n  background-color: black;\n  color: yellow;\n  border: 2px dashed yellow; }\n  .register-form input {\n    border: 2px dashed yellow;\n    transition: border 1s; }\n    .register-form input:focus {\n      border: 4px dashed yellow; }\n  .register-form button {\n    background-color: black;\n    color: yellow;\n    border: 2px solid yellow; }\n    .register-form button:hover {\n      background-color: yellow;\n      color: black;\n      border: 2px solid yellow; }\n\n.cloth-page .cloth-dsc {\n  background-color: yellow;\n  height: 30vh;\n  padding: 10px;\n  padding-left: 20px;\n  text-align: justify;\n  overflow: auto; }\n\n.cloth-page img {\n  width: 100%;\n  height: 100%; }\n\n.cloth-page .clothe-price {\n  display: block;\n  border: 1px solid yellow;\n  text-align: center;\n  color: yellow; }\n\n.cloth-page .buy-btn {\n  cursor: pointer;\n  color: black;\n  background-color: yellow;\n  padding: 10px;\n  text-align: center; }\n\n.cloth-page .yellow {\n  color: yellow; }\n\n.cloth-page .banner {\n  font-size: 100px;\n  color: yellow;\n  margin: 15% auto;\n  letter-spacing: 10px;\n  transform: rotate(-45deg); }\n\n.cloth-card {\n  border: 1px solid yellow;\n  position: relative; }\n  .cloth-card img {\n    min-height: 250px;\n    width: 100%;\n    height: 100%; }\n  .cloth-card .price {\n    position: absolute;\n    bottom: 10px;\n    font-size: 2rem;\n    width: 100%;\n    text-align: center;\n    color: yellow; }\n\n.wrapper {\n  border: 4px solid yellow;\n  padding: 4px; }\n\n.cloth-card-vertical {\n  position: relative;\n  color: white; }\n  .cloth-card-vertical img {\n    vertical-align: top;\n    width: 100%;\n    height: 100%; }\n  .cloth-card-vertical .hover-effect {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    height: 50%;\n    width: 100%;\n    opacity: 0;\n    font-size: 70px; }\n  .cloth-card-vertical:hover .hover-effect {\n    transition: all 0.5s;\n    -webkit-transition: all 0.5s;\n    opacity: 0.7;\n    background-color: black; }\n\n.scroll-horizenly {\n  overflow: auto;\n  flex-wrap: nowrap;\n  overflow-x: auto; }\n\n.banner .carousel-inner {\n  width: 100%;\n  margin-bottom: 20px; }\n  .banner .carousel-inner img {\n    height: 95vh;\n    width: 100%; }\n    @media screen and (max-width: 767px) {\n      .banner .carousel-inner img {\n        height: 70vh; } }\n    @media screen and (max-width: 575px) {\n      .banner .carousel-inner img {\n        height: 50vh; } }\n\n.filter {\n  background-color: yellow;\n  padding: 20px; }\n\n.store-header {\n  margin-bottom: 20px;\n  color: white;\n  font-size: 20px; }\n  @media screen and (min-width: 576px) {\n    .store-header {\n      font-size: 20px; } }\n  @media screen and (min-width: 768px) {\n    .store-header {\n      font-size: 20px; } }\n  @media screen and (min-width: 992px) {\n    .store-header {\n      font-size: 20px; } }\n  @media screen and (min-width: 1200px) {\n    .store-header {\n      font-size: 20px; } }\n  @media screen and (min-width: 1600px) {\n    .store-header {\n      font-size: 20px; } }\n  .store-header .wrapper-store {\n    border: 3px solid yellow;\n    padding: 3px; }\n    .store-header .wrapper-store .bucket-btn {\n      background-color: yellow;\n      color: black;\n      text-align: center;\n      height: 100%;\n      cursor: pointer;\n      font-size: 1em; }\n  .store-header .badge {\n    display: block;\n    background-color: yellow;\n    color: black;\n    border-radius: 0;\n    height: 100%;\n    font-size: 1em; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -1313,7 +1313,7 @@ const ClothCard = props => {
   //   console.log(props);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: `/cloth/${props.cloth.id}`,
-    className: "col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 m-4 wrapper",
+    className: "col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-3",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1321,12 +1321,28 @@ const ClothCard = props => {
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "cloth-card",
+    className: "p-5 p-sm-0",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrapper",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "cloth-card",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _assets_img_hoody_jpeg__WEBPACK_IMPORTED_MODULE_1___default.a,
@@ -1334,18 +1350,18 @@ const ClothCard = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 9
+      lineNumber: 16,
+      columnNumber: 13
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "price",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 9
+      lineNumber: 17,
+      columnNumber: 13
     }
-  }, props.cloth.price, " \u062A\u0648\u0645\u0646 +")));
+  }, props.cloth.price, " \u062A\u0648\u0645\u0646 +")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ClothCard);
@@ -1373,12 +1389,20 @@ var _jsxFileName = "/home/mj/pr/limak/src/components/cloth/ClothCardVertical.jsx
 
 const ClothCardVertial = props => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "cloth-card-vertical",
+    className: "col",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
       columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "cloth-card-vertical",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _assets_img_cloth1_png__WEBPACK_IMPORTED_MODULE_1___default.a,
@@ -1386,41 +1410,41 @@ const ClothCardVertial = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 7
+      lineNumber: 9,
+      columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hover-effect",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 7
+      lineNumber: 10,
+      columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: `/cloth/${props.cloth.id}`,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 9
+      lineNumber: 11,
+      columnNumber: 11
     }
   }, "\u0627\u062F\u06CC\u062A\u0648\u0631\u06CC\u0627\u0644"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 9
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: `/store`,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
       columnNumber: 11
     }
-  }, "\u0641\u0631\u0648\u0634\u06AF\u0627\u0647"))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: `/store`,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 13
+    }
+  }, "\u0641\u0631\u0648\u0634\u06AF\u0627\u0647")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ClothCardVertial);
@@ -1444,20 +1468,12 @@ var _jsxFileName = "/home/mj/pr/limak/src/components/cloth/ClothContainer.jsx";
 
 
 const ClothContainer = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: "container",
+  className: "row justify-content-between",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6,
     columnNumber: 3
-  }
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: "row justify-content-around",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7,
-    columnNumber: 5
   }
 }, props.cloths.map(cloth => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClothCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
   cloth: cloth,
@@ -1465,10 +1481,10 @@ const ClothContainer = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9,
-    columnNumber: 9
+    lineNumber: 8,
+    columnNumber: 7
   }
-}))));
+})));
 
 /* harmony default export */ __webpack_exports__["default"] = (ClothContainer);
 
@@ -1940,9 +1956,9 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 20,
         columnNumber: 7
       }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: "/",
       className: "navbar-brand",
-      href: "/",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -2604,7 +2620,7 @@ const Filter = props => {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "filter container-fluid",
+    className: "filter",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2918,162 +2934,198 @@ const Store = props => {
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "store-header",
+    className: "container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22,
       columnNumber: 7
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "store-header",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23,
       columnNumber: 9
     }
-  }, "\u06A9\u0645\u067E\u0627\u0646\u06CC \u0644\u06CC\u0645\u0627\u06A9"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row justify-content-between",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24,
-      columnNumber: 9
+      columnNumber: 11
     }
-  }, "\u0641\u0631\u0648\u0634\u06AF\u0627\u0647"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "col",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25,
-      columnNumber: 9
+      columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "\u06A9\u0645\u067E\u0627\u0646\u06CC \u0644\u06CC\u0645\u0627\u06A9"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "col text-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26,
-      columnNumber: 11
+      columnNumber: 13
     }
-  }, "\u0633\u0628\u062F \u062E\u0631\u06CC\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, "\u0641\u0631\u0648\u0634\u06AF\u0627\u0647"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27,
-      columnNumber: 11
+      columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-4 wrapper-store ml-1",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "text-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28,
-      columnNumber: 13
+      columnNumber: 15
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "badge",
+  }, "\u0633\u0628\u062F \u062E\u0631\u06CC\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row justify-content-between",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29,
       columnNumber: 15
     }
-  }, bucketLength)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-7 wrapper-store",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-4 pr-0",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 17
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrapper-store",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 19
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "badge",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 21
+    }
+  }, bucketLength))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-8 wrapper-store",
     type: "button",
     "data-toggle": "modal",
     "data-target": "#exampleModalLong",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 13
+      lineNumber: 35,
+      columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bucket-btn",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 15
+      lineNumber: 41,
+      columnNumber: 19
     }
   }, "\u0645\u0634\u0627\u0647\u062F\u0647")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 13
+      lineNumber: 43,
+      columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_bucket_Bucket__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 15
+      lineNumber: 44,
+      columnNumber: 19
     }
-  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container-fluid",
+  }))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 51,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-around",
+    className: "store-content",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 52,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-sm-7 col-md-8 col-lg-9",
+    className: "row justify-content-between",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 53,
       columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-8 p-0",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cloth_ClothContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     cloths: cloths,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
-      columnNumber: 13
+      lineNumber: 55,
+      columnNumber: 15
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-sm-5 col-md-4 col-lg-3",
+    className: "col-12  col-lg-3 p-0",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
-      columnNumber: 11
+      lineNumber: 57,
+      columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filter__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
-      columnNumber: 13
+      lineNumber: 58,
+      columnNumber: 15
     }
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
-      columnNumber: 9
+      lineNumber: 61,
+      columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_common_Pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
     page: pagination,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
-      columnNumber: 11
+      lineNumber: 62,
+      columnNumber: 13
     }
-  }))));
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Store);
@@ -3579,5 +3631,5 @@ module.exports = __webpack_require__(/*! /home/mj/pr/limak/src/index.js */"./src
 
 /***/ })
 
-},[[1,"runtime-main",1]]]);
+},[[1,"runtime-main",0]]]);
 //# sourceMappingURL=main.chunk.js.map
