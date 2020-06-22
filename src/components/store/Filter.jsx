@@ -57,7 +57,7 @@ const Filter = (props) => {
       size: [...size],
       category: [...category],
     };
-    dispatch(filter(query));
+    dispatch(filter(query, 1));
   };
 
   return (

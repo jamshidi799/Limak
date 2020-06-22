@@ -37,12 +37,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_landing_HomePage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/landing/HomePage */ "./src/components/landing/HomePage.jsx");
 /* harmony import */ var _components_auth_Signin__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/auth/Signin */ "./src/components/auth/Signin.jsx");
 /* harmony import */ var _components_auth_Signup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/auth/Signup */ "./src/components/auth/Signup.jsx");
-/* harmony import */ var _components_common_Navbar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/common/Navbar */ "./src/components/common/Navbar.jsx");
-/* harmony import */ var _components_common_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/common/Footer */ "./src/components/common/Footer.jsx");
-/* harmony import */ var _components_store_Store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/store/Store */ "./src/components/store/Store.jsx");
-/* harmony import */ var _components_cloth_ClothPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/cloth/ClothPage */ "./src/components/cloth/ClothPage.jsx");
-/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./actions/auth */ "./src/actions/auth.js");
+/* harmony import */ var _components_auth_ResetPassword__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/auth/ResetPassword */ "./src/components/auth/ResetPassword.jsx");
+/* harmony import */ var _components_common_Navbar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/common/Navbar */ "./src/components/common/Navbar.jsx");
+/* harmony import */ var _components_common_Footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/common/Footer */ "./src/components/common/Footer.jsx");
+/* harmony import */ var _components_store_Store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/store/Store */ "./src/components/store/Store.jsx");
+/* harmony import */ var _components_cloth_ClothPage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/cloth/ClothPage */ "./src/components/cloth/ClothPage.jsx");
+/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./actions/auth */ "./src/actions/auth.js");
 var _jsxFileName = "/home/mj/pr/limak/src/App.js";
+
 
 
 
@@ -64,28 +66,28 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 20,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 21,
       columnNumber: 7
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Navbar__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
@@ -95,7 +97,7 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 11
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
@@ -105,7 +107,7 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 25,
       columnNumber: 11
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
@@ -115,34 +117,44 @@ function App() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 11
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
-    exact: true,
-    path: "/store/:pagination",
-    component: _components_store_Store__WEBPACK_IMPORTED_MODULE_10__["default"],
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 26,
       columnNumber: 11
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
     exact: true,
-    path: "/cloth/:id",
-    component: _components_cloth_ClothPage__WEBPACK_IMPORTED_MODULE_11__["default"],
+    path: "/resetpass",
+    component: _components_auth_ResetPassword__WEBPACK_IMPORTED_MODULE_8__["default"],
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27,
       columnNumber: 11
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Footer__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
+    exact: true,
+    path: "/store/:pagination",
+    component: _components_store_Store__WEBPACK_IMPORTED_MODULE_11__["default"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 11
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
+    exact: true,
+    path: "/cloth/:id",
+    component: _components_cloth_ClothPage__WEBPACK_IMPORTED_MODULE_12__["default"],
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_Footer__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
       columnNumber: 9
     }
   })));
@@ -211,13 +223,14 @@ if(true) {
 /*!*****************************!*\
   !*** ./src/actions/auth.js ***!
   \*****************************/
-/*! exports provided: register, login, tokenConfig, logout, authenticate */
+/*! exports provided: register, login, resetPass, tokenConfig, logout, authenticate */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resetPass", function() { return resetPass; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tokenConfig", function() { return tokenConfig; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "authenticate", function() { return authenticate; });
@@ -272,6 +285,21 @@ const login = (username, password) => dispatch => {
       // type: LOGIN_FAIL,
       type: "default"
     });
+  });
+};
+const resetPass = email => dispatch => {
+  // Headers
+  const config = {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }; // Request Body
+
+  const body = JSON.stringify({
+    email
+  });
+  axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/accounts/reset-password`, body, config).then(res => {}).catch(err => {
+    console.log(err);
   });
 }; // Setup config with token - helper function
 
@@ -349,7 +377,7 @@ const deleteFromBucket = id => (dispatch, getState) => {
 const addToBucket = data => (dispatch, getState) => {
   const clothe = data.clothe;
   const request = {
-    clothe_id: clothe.id,
+    clothe_uid: clothe.id,
     color_name: clothe.information[0].color.name,
     size_name: clothe.information[0].size.name,
     count: 1
@@ -416,11 +444,19 @@ const getClothById = id => (dispatch, getState) => {
     });
   }).catch(err => console.log(err));
 };
-const filter = query => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/store_page`, query, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
-    return dispatch({
+const filter = (query, pagination) => (dispatch, getState) => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/store_page?page=${pagination}`, query, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
+    dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_3__["FILTER"],
       payload: res.data
+    });
+    dispatch({
+      type: _types__WEBPACK_IMPORTED_MODULE_3__["QUERY"],
+      payload: {
+        query,
+        next: res.data.next,
+        previous: res.data.previous
+      }
     });
   }).catch(err => console.log(err));
 };
@@ -488,7 +524,7 @@ const getCategory = () => (dispatch, getState) => {
 /*!******************************!*\
   !*** ./src/actions/types.js ***!
   \******************************/
-/*! exports provided: REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, AUTH_ERROR, USER_LOADING, USER_LOADED, AUTHENTICATED, ADD_TO_BUCKET, DELTE_FROM_BUCKET, GET_BUCKET, PAY_BUCKET, ADD_BUCKET_TO_SERVER, GET_CLOTHS, GET_CLOTH_BY_ID, GET_SIZE, GET_KIND, GET_CATEGORY, GET_COLOR, FILTER */
+/*! exports provided: REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, AUTH_ERROR, USER_LOADING, USER_LOADED, AUTHENTICATED, ADD_TO_BUCKET, DELTE_FROM_BUCKET, GET_BUCKET, PAY_BUCKET, ADD_BUCKET_TO_SERVER, GET_CLOTHS, GET_CLOTH_BY_ID, GET_SIZE, GET_KIND, GET_CATEGORY, GET_COLOR, FILTER, QUERY */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -514,6 +550,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_CATEGORY", function() { return GET_CATEGORY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COLOR", function() { return GET_COLOR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FILTER", function() { return FILTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QUERY", function() { return QUERY; });
 const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 const REGISTER_FAIL = "REGISTER_FAIL";
 const LOGIN_SUCCESS = "LOGIN_SUCCESS";
@@ -535,6 +572,7 @@ const GET_KIND = "GET_KIND";
 const GET_CATEGORY = "GET_CATEGORY";
 const GET_COLOR = "GET_COLOR";
 const FILTER = "FILTER";
+const QUERY = "QUERY";
 
 /***/ }),
 
@@ -593,6 +631,119 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxA
 
 /***/ }),
 
+/***/ "./src/components/auth/ResetPassword.jsx":
+/*!***********************************************!*\
+  !*** ./src/components/auth/ResetPassword.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Direction; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/auth */ "./src/actions/auth.js");
+var _jsxFileName = "/home/mj/pr/limak/src/components/auth/ResetPassword.jsx";
+
+
+
+
+function Direction() {
+  const [email, setEmail] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+  const [shouldRedirect, setShouldRedirect] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+
+  const onChange = e => {
+    setEmail(e.target.value);
+  };
+
+  const onSubmit = e => {
+    e.preventDefault();
+    dispatch(Object(_actions_auth__WEBPACK_IMPORTED_MODULE_3__["resetPass"])(email));
+    setShouldRedirect(true);
+  };
+
+  if (shouldRedirect) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+      to: "./login",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 12
+      }
+    });
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container login-form p-5",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "text-center mb-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 7
+    }
+  }, "\u0641\u0631\u0627\u0645\u0648\u0634\u06CC \u0631\u0645\u0632 \u0639\u0628\u0648\u0631"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-row justify-content-md-around",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group col-12 mb-4",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 11
+    }
+  }, "\u0627\u06CC\u0645\u06CC\u0644"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    name: "email",
+    value: email,
+    required: true,
+    onChange: onChange,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn",
+    onClick: onSubmit,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 9
+    }
+  }, "\u0631\u06CC\u0633\u062A")));
+}
+
+/***/ }),
+
 /***/ "./src/components/auth/Signin.jsx":
 /*!****************************************!*\
   !*** ./src/components/auth/Signin.jsx ***!
@@ -606,18 +757,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
-/* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/AccountCircle */ "./node_modules/@material-ui/icons/AccountCircle.js");
-/* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _material_ui_icons_Lock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Lock */ "./node_modules/@material-ui/icons/Lock.js");
-/* harmony import */ var _material_ui_icons_Lock__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Lock__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../actions/auth */ "./src/actions/auth.js");
-/* harmony import */ var _actions_bucket__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../actions/bucket */ "./src/actions/bucket.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/auth */ "./src/actions/auth.js");
+/* harmony import */ var _actions_bucket__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/bucket */ "./src/actions/bucket.js");
 var _jsxFileName = "/home/mj/pr/limak/src/components/auth/Signin.jsx";
-
-
-
 
 
 
@@ -628,6 +771,7 @@ function Direction() {
     username: "",
     password: ""
   });
+  const [shouldRedirect, setShouldRedirect] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const isAuthenticated = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.auth.isAuthenticated);
   const bucket = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.bucket.list);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
@@ -644,26 +788,40 @@ function Direction() {
       username,
       password
     } = state;
-    dispatch(Object(_actions_auth__WEBPACK_IMPORTED_MODULE_6__["login"])(username, password));
+    dispatch(Object(_actions_auth__WEBPACK_IMPORTED_MODULE_3__["login"])(username, password));
+    setShouldRedirect(true);
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     bucket.forEach(item => {
       const data = {
-        clothe_id: item.clothe.id,
+        clothe_uid: item.clothe.id,
         color_name: item.clothe.information[0].color.name,
         size_name: item.clothe.information[0].size.name,
         count: 1
       };
-      dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_7__["addBucketToServer"])(data));
+      dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_4__["addBucketToServer"])(data));
     });
   }, [isAuthenticated]);
+
+  if (shouldRedirect) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+      to: "./login",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39,
+        columnNumber: 12
+      }
+    });
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container login-form",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 43,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -671,7 +829,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 44,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -679,14 +837,14 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 45,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 46,
       columnNumber: 11
     }
   }, "\u0646\u0627\u0645 \u06A9\u0627\u0631\u0628\u0631\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -699,7 +857,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 47,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -707,18 +865,18 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 57,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 58,
       columnNumber: 11
     }
   }, "\u067E\u0633\u0648\u0631\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "text",
+    type: "password",
     className: "form-control",
     name: "password",
     value: state.password,
@@ -727,7 +885,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 59,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -736,10 +894,19 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 68,
       columnNumber: 9
     }
-  }, "\u0648\u0631\u0648\u062F")));
+  }, "\u0648\u0631\u0648\u062F")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/resetpass",
+    className: "text-center",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 7
+    }
+  }, "\u0631\u0645\u0632 \u062E\u0648\u062F \u0631\u0627 \u0641\u0631\u0627\u0645\u0648\u0634 \u06A9\u0631\u062F\u0647 \u0627\u06CC\u062F\u061F"));
 }
 
 /***/ }),
@@ -1113,7 +1280,7 @@ const Bucket = () => {
   const onSubmit = () => {
     bucket.forEach(item => {
       const data = {
-        clothe_id: item.clothe.id,
+        clothe_uid: item.clothe.id,
         color_name: item.clothe.information[0].color.name,
         size_name: item.clothe.information[0].size.name,
         count: 1
@@ -2155,33 +2322,33 @@ const mapStateToProps = state => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 var _jsxFileName = "/home/mj/pr/limak/src/components/common/Pagination.jsx";
 
 
-const Pagination = props => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    "aria-label": "Page navigation example",
+
+
+const Pagination = ({
+  page
+}) => {
+  const next = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.store.next);
+  const previous = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.store.previous);
+
+  const getPrevious = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5,
+      lineNumber: 10,
       columnNumber: 5
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    class: "pagination",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     class: "page-item",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 9
+      lineNumber: 11,
+      columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     class: "page-link",
@@ -2190,83 +2357,75 @@ const Pagination = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 11
+      lineNumber: 12,
+      columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     "aria-hidden": "true",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 13
+      lineNumber: 13,
+      columnNumber: 11
     }
   }, "\xAB"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     class: "sr-only",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 13
+      lineNumber: 14,
+      columnNumber: 11
     }
   }, "Previous"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     class: "page-item",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 9
+      lineNumber: 17,
+      columnNumber: 7
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: `./${Number(page) - 1}`,
     class: "page-link",
-    href: "#",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 11
-    }
-  }, "1")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    class: "page-item",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18,
       columnNumber: 9
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    class: "page-link",
-    href: "#",
+  }, Number(page) - 1)));
+
+  const getNext = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 11
+      lineNumber: 26,
+      columnNumber: 5
     }
-  }, "2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     class: "page-item",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 9
+      lineNumber: 27,
+      columnNumber: 7
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: `./${Number(page) + 1}`,
     class: "page-link",
-    href: "#",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 11
-    }
-  }, "3")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    class: "page-item",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28,
       columnNumber: 9
+    }
+  }, Number(page) + 1)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    class: "page-item",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     class: "page-link",
@@ -2275,26 +2434,74 @@ const Pagination = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 11
+      lineNumber: 33,
+      columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     "aria-hidden": "true",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
-      columnNumber: 13
+      lineNumber: 34,
+      columnNumber: 11
     }
   }, "\xBB"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     class: "sr-only",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 13
+      lineNumber: 35,
+      columnNumber: 11
     }
-  }, "Next")))));
+  }, "Next"))));
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "Page navigation",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    class: "pagination mt-4",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 7
+    }
+  }, previous ? getPrevious() : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 37
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    class: "page-item",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "page-link",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 11
+    }
+  }, page)), next ? getNext() : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 29
+    }
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Pagination);
@@ -2616,7 +2823,7 @@ const Filter = props => {
       size: [...size],
       category: [...category]
     };
-    dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_5__["filter"])(query));
+    dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_5__["filter"])(query, 1));
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2921,16 +3128,17 @@ var _jsxFileName = "/home/mj/pr/limak/src/components/store/Store.jsx";
 const Store = props => {
   const cloths = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.cloth.clothes);
   const bucketLength = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.bucket.list.length);
+  const query = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.store.query);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
   const pagination = props.match.params.pagination;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_5__["getAllCloths"])());
-  }, []);
+    dispatch(Object(_actions_cloth__WEBPACK_IMPORTED_MODULE_5__["filter"])(query, pagination));
+  }, [pagination]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2938,7 +3146,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2946,7 +3154,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2954,7 +3162,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 25,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -2962,7 +3170,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 13
     }
   }, "\u06A9\u0645\u067E\u0627\u0646\u06CC \u0644\u06CC\u0645\u0627\u06A9"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -2970,7 +3178,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 13
     }
   }, "\u0641\u0631\u0648\u0634\u06AF\u0627\u0647"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2978,7 +3186,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -2986,7 +3194,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 15
     }
   }, "\u0633\u0628\u062F \u062E\u0631\u06CC\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2994,7 +3202,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 30,
       columnNumber: 15
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3002,7 +3210,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3010,7 +3218,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3018,7 +3226,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 21
     }
   }, bucketLength))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3029,7 +3237,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 36,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3037,21 +3245,21 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 42,
       columnNumber: 19
     }
   }, "\u0645\u0634\u0627\u0647\u062F\u0647")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 44,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_bucket_Bucket__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 45,
       columnNumber: 19
     }
   }))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3059,7 +3267,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3067,7 +3275,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3075,7 +3283,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 54,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3083,7 +3291,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 55,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cloth_ClothContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3091,7 +3299,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 56,
       columnNumber: 15
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3099,14 +3307,14 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 58,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filter__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 59,
       columnNumber: 15
     }
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3114,7 +3322,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 62,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_common_Pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -3122,7 +3330,7 @@ const Store = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 63,
       columnNumber: 13
     }
   })))));
@@ -3142,7 +3350,7 @@ const Store = props => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SERVER_ADDRESS", function() { return SERVER_ADDRESS; });
-const SERVER_ADDRESS = 'http://127.0.0.1:8000';
+const SERVER_ADDRESS = "http://45.149.77.38";
 
 /***/ }),
 
@@ -3426,6 +3634,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./src/actions/types.js");
 
 const initialState = {
+  query: {
+    color: [],
+    size: [],
+    kind: [],
+    category: []
+  },
+  next: null,
+  previous: null,
   colors: [{
     name: "قرمز"
   }, {
@@ -3479,6 +3695,13 @@ const initialState = {
 
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["FILTER"]:
       return { ...state
+      };
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["QUERY"]:
+      return { ...state,
+        query: actions.payload.query,
+        next: actions.payload.next,
+        previous: actions.payload.previous
       };
 
     default:

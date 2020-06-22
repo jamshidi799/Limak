@@ -4,9 +4,18 @@ import {
   GET_SIZE,
   GET_KIND,
   FILTER,
+  QUERY,
 } from "../actions/types";
 
 const initialState = {
+  query: {
+    color: [],
+    size: [],
+    kind: [],
+    category: [],
+  },
+  next: null,
+  previous: null,
   colors: [
     {
       name: "قرمز",
@@ -78,6 +87,13 @@ export default function (state = initialState, actions) {
     case FILTER:
       return {
         ...state,
+      };
+    case QUERY:
+      return {
+        ...state,
+        query: actions.payload.query,
+        next: actions.payload.next,
+        previous: actions.payload.previous,
       };
 
     default:

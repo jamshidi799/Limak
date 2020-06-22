@@ -4,19 +4,20 @@ import { useSelector, useDispatch } from "react-redux";
 import ClothContainer from "../cloth/ClothContainer";
 import Filter from "./Filter";
 import Bucket from "../bucket/Bucket";
-import { getAllCloths } from "../../actions/cloth";
+import { filter } from "../../actions/cloth";
 import Pagination from "../common/Pagination";
 
 const Store = (props) => {
   const cloths = useSelector((state) => state.cloth.clothes);
   const bucketLength = useSelector((state) => state.bucket.list.length);
+  const query = useSelector((state) => state.store.query);
   const dispatch = useDispatch();
 
   const pagination = props.match.params.pagination;
 
   useEffect(() => {
-    dispatch(getAllCloths());
-  }, []);
+    dispatch(filter(query, pagination));
+  }, [pagination]);
   return (
     <Fragment>
       <div className="container">

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { tokenConfig } from "./auth";
 import { SERVER_ADDRESS } from "../consts";
-import { GET_CLOTHS, GET_CLOTH_BY_ID, FILTER } from "./types";
+import { GET_CLOTHS, GET_CLOTH_BY_ID, FILTER, QUERY } from "./types";
 
 export const getAllCloths = () => (dispatch, getState) => {
   axios
@@ -27,17 +27,21 @@ export const getClothById = (id) => (dispatch, getState) => {
     .catch((err) => console.log(err));
 };
 
-export const filter = (query) => (dispatch, getState) => {
+export const filter = (query, pagination) => (dispatch, getState) => {
   axios
     .post(
-      `${SERVER_ADDRESS}/api/store/store_page`,
+      `${SERVER_ADDRESS}/api/store/store_page?page=${pagination}`,
       query,
       tokenConfig(getState)
     )
     .then((res) => {
-      return dispatch({
+      dispatch({
         type: FILTER,
         payload: res.data,
+      });
+      dispatch({
+        type: QUERY,
+        payload: { query, next: res.data.next, previous: res.data.previous },
       });
     })
     .catch((err) => console.log(err));

@@ -22,3 +22,4 @@ export const GET_KIND = "GET_KIND";
 export const GET_CATEGORY = "GET_CATEGORY";
 export const GET_COLOR = "GET_COLOR";
 export const FILTER = "FILTER";
+export const QUERY = "QUERY";
