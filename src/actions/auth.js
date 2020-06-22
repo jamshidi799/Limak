@@ -63,6 +63,25 @@ export const login = (username, password) => (dispatch) => {
     });
 };
 
+export const resetPass = (email) => (dispatch) => {
+  // Headers
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  // Request Body
+  const body = JSON.stringify({ email });
+
+  axios
+    .post(`${SERVER_ADDRESS}/api/accounts/reset-password`, body, config)
+    .then((res) => {})
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 // Setup config with token - helper function
 export const tokenConfig = (getState) => {
   // Get token from state

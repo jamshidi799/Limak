@@ -56,3 +56,4 @@ cypress/videos/
 cacert
 
 devBuild
+build

@@ -10,7 +10,7 @@ const Bucket = () => {
   const onSubmit = () => {
     bucket.forEach((item) => {
       const data = {
-        clothe_id: item.clothe.id,
+        clothe_uid: item.clothe.id,
         color_name: item.clothe.information[0].color.name,
         size_name: item.clothe.information[0].size.name,
         count: 1,

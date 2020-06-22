@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  createMuiTheme,
-  ThemeProvider,
-  withStyles,
-} from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import LockIcon from "@material-ui/icons/Lock";
+import { Link, Redirect } from "react-router-dom";
 import { login } from "../../actions/auth";
 import { addBucketToServer } from "../../actions/bucket";
 
 export default function Direction() {
   const [state, setState] = useState({ username: "", password: "" });
+  const [shouldRedirect, setShouldRedirect] = useState(false);
 
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const bucket = useSelector((state) => state.bucket.list);
@@ -26,12 +20,13 @@ export default function Direction() {
     e.preventDefault();
     const { username, password } = state;
     dispatch(login(username, password));
+    setShouldRedirect(true);
   };
 
   useEffect(() => {
     bucket.forEach((item) => {
       const data = {
-        clothe_id: item.clothe.id,
+        clothe_uid: item.clothe.id,
         color_name: item.clothe.information[0].color.name,
         size_name: item.clothe.information[0].size.name,
         count: 1,
@@ -39,6 +34,10 @@ export default function Direction() {
       dispatch(addBucketToServer(data));
     });
   }, [isAuthenticated]);
+
+  if (shouldRedirect) {
+    return <Redirect to="./login" />;
+  }
 
   return (
     <div className="container login-form">
@@ -58,7 +57,7 @@ export default function Direction() {
         <div className="form-group col-12">
           <label>پسورد</label>
           <input
-            type="text"
+            type="password"
             className="form-control"
             name="password"
             value={state.password}
@@ -70,6 +69,9 @@ export default function Direction() {
           ورود
         </button>
       </div>
+      <Link to="/resetpass" className="text-center">
+        رمز خود را فراموش کرده اید؟
+      </Link>
     </div>
   );
 }

@@ -24,8 +24,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "craco test",
     "eject": "craco eject"
   },

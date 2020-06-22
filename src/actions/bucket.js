@@ -34,7 +34,7 @@ export const deleteFromBucket = (id) => (dispatch, getState) => {
 export const addToBucket = (data) => (dispatch, getState) => {
   const clothe = data.clothe;
   const request = {
-    clothe_id: clothe.id,
+    clothe_uid: clothe.id,
     color_name: clothe.information[0].color.name,
     size_name: clothe.information[0].size.name,
     count: 1,
