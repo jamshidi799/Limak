@@ -38,7 +38,7 @@ const Bucket = () => {
           <div className="modal-body">
             <ul className="list-group">
               {bucket.map((e) => (
-                <BucketRow cloth={e.clothe} key={e.clothe.id} />
+                <BucketRow item={e} key={e.uu_id} />
               ))}
             </ul>
           </div>

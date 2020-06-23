@@ -339,15 +339,15 @@ const authenticate = () => dispatch => dispatch({
 /*!*******************************!*\
   !*** ./src/actions/bucket.js ***!
   \*******************************/
-/*! exports provided: getBucket, deleteFromBucket, addToBucket, addBucketToServer */
+/*! exports provided: getBucket, addToBucket, addBucketToServer, deleteFromBucket */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBucket", function() { return getBucket; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteFromBucket", function() { return deleteFromBucket; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToBucket", function() { return addToBucket; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addBucketToServer", function() { return addBucketToServer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteFromBucket", function() { return deleteFromBucket; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./src/actions/types.js");
@@ -356,7 +356,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // GET POSTS
 
 const getBucket = () => (dispatch, getState) => {
   axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_3__["SERVER_ADDRESS"]}/api/store/basket`, Object(_auth__WEBPACK_IMPORTED_MODULE_2__["tokenConfig"])(getState)).then(res => {
@@ -365,15 +364,7 @@ const getBucket = () => (dispatch, getState) => {
       payload: res.data
     });
   }).catch(err => console.log(err));
-}; // DELETE POST
-
-const deleteFromBucket = id => (dispatch, getState) => {
-  dispatch({
-    type: _types__WEBPACK_IMPORTED_MODULE_1__["DELTE_FROM_BUCKET"],
-    payload: id
-  });
-}; // ADD POST
-
+};
 const addToBucket = data => (dispatch, getState) => {
   const clothe = data.clothe;
   const request = {
@@ -383,24 +374,50 @@ const addToBucket = data => (dispatch, getState) => {
     count: 1
   };
   axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_3__["SERVER_ADDRESS"]}/api/store/basket/add`, request, Object(_auth__WEBPACK_IMPORTED_MODULE_2__["tokenConfig"])(getState)).then(res => {
+    console.log(res);
     dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_1__["ADD_TO_BUCKET"],
       payload: { ...data,
-        added: true
+        added: true,
+        id: res.data.id
       }
     });
   }).catch(err => {
+    console.log(err);
     dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_1__["ADD_TO_BUCKET"],
       payload: data
     });
   });
 };
-const addBucketToServer = clothe => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_3__["SERVER_ADDRESS"]}/api/store/basket/add`, clothe, Object(_auth__WEBPACK_IMPORTED_MODULE_2__["tokenConfig"])(getState)).then(res => {
+const addBucketToServer = item => (dispatch, getState) => {
+  const data = {
+    clothe_uid: item.clothe.id,
+    color_name: item.clothe.information[0].color.name,
+    size_name: item.clothe.information[0].size.name,
+    count: 1
+  };
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_3__["SERVER_ADDRESS"]}/api/store/basket/add`, data, Object(_auth__WEBPACK_IMPORTED_MODULE_2__["tokenConfig"])(getState)).then(res => {
     return dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_1__["ADD_BUCKET_TO_SERVER"],
-      payload: res.data
+      payload: { ...item,
+        added: true,
+        id: res.data.id
+      }
+    });
+  }).catch(err => console.log(err));
+};
+const deleteFromBucket = id => (dispatch, getState) => {
+  // const data = {
+  //   clothe_uid: item.clothe.id,
+  //   color_name: item.clothe.information[0].color.name,
+  //   size_name: item.clothe.information[0].size.name,
+  //   count: 1,
+  // };
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete(`${_consts__WEBPACK_IMPORTED_MODULE_3__["SERVER_ADDRESS"]}/api/store/basket/edit/${id}`, Object(_auth__WEBPACK_IMPORTED_MODULE_2__["tokenConfig"])(getState)).then(res => {
+    return dispatch({
+      type: _types__WEBPACK_IMPORTED_MODULE_1__["DELTE_FROM_BUCKET"],
+      payload: id
     });
   }).catch(err => console.log(err));
 };
@@ -429,7 +446,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const getAllCloths = () => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/store_page`, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/store_page`).then(res => {
     return dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_3__["GET_CLOTHS"],
       payload: res.data
@@ -437,7 +454,7 @@ const getAllCloths = () => (dispatch, getState) => {
   }).catch(err => console.log(err));
 };
 const getClothById = id => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/clothe/${id}`, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/clothe/${id}`).then(res => {
     return dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_3__["GET_CLOTH_BY_ID"],
       payload: res.data
@@ -445,7 +462,7 @@ const getClothById = id => (dispatch, getState) => {
   }).catch(err => console.log(err));
 };
 const filter = (query, pagination) => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/store_page?page=${pagination}`, query, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/store_page?page=${pagination}`, query).then(res => {
     dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_3__["FILTER"],
       payload: res.data
@@ -486,7 +503,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const getSizes = () => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/clothe-size`, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/clothe-size`).then(res => {
     return dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_3__["GET_SIZE"],
       payload: res.data
@@ -494,7 +511,7 @@ const getSizes = () => (dispatch, getState) => {
   }).catch(err => console.log(err));
 };
 const getKinds = () => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/clothe-kind`, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/clothe-kind`).then(res => {
     return dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_3__["GET_KIND"],
       payload: res.data
@@ -502,7 +519,7 @@ const getKinds = () => (dispatch, getState) => {
   }).catch(err => console.log(err));
 };
 const getColors = () => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/clothe-color`, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/clothe-color`).then(res => {
     return dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_3__["GET_COLOR"],
       payload: res.data
@@ -510,7 +527,7 @@ const getColors = () => (dispatch, getState) => {
   }).catch(err => console.log(err));
 };
 const getCategory = () => (dispatch, getState) => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/category`, Object(_auth__WEBPACK_IMPORTED_MODULE_1__["tokenConfig"])(getState)).then(res => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${_consts__WEBPACK_IMPORTED_MODULE_2__["SERVER_ADDRESS"]}/api/store/category`).then(res => {
     return dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_3__["GET_CATEGORY"],
       payload: res.data
@@ -524,7 +541,7 @@ const getCategory = () => (dispatch, getState) => {
 /*!******************************!*\
   !*** ./src/actions/types.js ***!
   \******************************/
-/*! exports provided: REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, AUTH_ERROR, USER_LOADING, USER_LOADED, AUTHENTICATED, ADD_TO_BUCKET, DELTE_FROM_BUCKET, GET_BUCKET, PAY_BUCKET, ADD_BUCKET_TO_SERVER, GET_CLOTHS, GET_CLOTH_BY_ID, GET_SIZE, GET_KIND, GET_CATEGORY, GET_COLOR, FILTER, QUERY */
+/*! exports provided: REGISTER_SUCCESS, REGISTER_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, AUTH_ERROR, USER_LOADING, USER_LOADED, AUTHENTICATED, ADD_TO_BUCKET, DELTE_FROM_BUCKET, GET_BUCKET, PAY_BUCKET, ADD_BUCKET_TO_SERVER, GET_CLOTHS, GET_CLOTH_BY_ID, GET_SIZE, GET_KIND, GET_CATEGORY, GET_COLOR, FILTER, QUERY, FOOTER */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -551,6 +568,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COLOR", function() { return GET_COLOR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FILTER", function() { return FILTER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QUERY", function() { return QUERY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FOOTER", function() { return FOOTER; });
 const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 const REGISTER_FAIL = "REGISTER_FAIL";
 const LOGIN_SUCCESS = "LOGIN_SUCCESS";
@@ -573,6 +591,7 @@ const GET_CATEGORY = "GET_CATEGORY";
 const GET_COLOR = "GET_COLOR";
 const FILTER = "FILTER";
 const QUERY = "QUERY";
+const FOOTER = "FOOTER";
 
 /***/ }),
 
@@ -794,34 +813,22 @@ function Direction() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     bucket.forEach(item => {
-      const data = {
-        clothe_uid: item.clothe.id,
-        color_name: item.clothe.information[0].color.name,
-        size_name: item.clothe.information[0].size.name,
-        count: 1
-      };
-      dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_4__["addBucketToServer"])(data));
-    });
-  }, [isAuthenticated]);
-
-  if (shouldRedirect) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
-      to: "./login",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 39,
-        columnNumber: 12
+      if (!item.added) {
+        dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_4__["addBucketToServer"])(item));
       }
     });
-  }
+  }, [isAuthenticated]); // if (shouldRedirect) {
+  //   setTimeout(() => {
+  //     return <Redirect to="./store/1" />;
+  //   }, 1000);
+  // }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container login-form",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 41,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -829,7 +836,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 42,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -837,14 +844,14 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 43,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 44,
       columnNumber: 11
     }
   }, "\u0646\u0627\u0645 \u06A9\u0627\u0631\u0628\u0631\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -857,7 +864,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 45,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -865,14 +872,14 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 55,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 56,
       columnNumber: 11
     }
   }, "\u067E\u0633\u0648\u0631\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -885,7 +892,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 57,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -894,7 +901,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 66,
       columnNumber: 9
     }
   }, "\u0648\u0631\u0648\u062F")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -903,7 +910,7 @@ function Direction() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 70,
       columnNumber: 7
     }
   }, "\u0631\u0645\u0632 \u062E\u0648\u062F \u0631\u0627 \u0641\u0631\u0627\u0645\u0648\u0634 \u06A9\u0631\u062F\u0647 \u0627\u06CC\u062F\u061F"));
@@ -1353,8 +1360,8 @@ const Bucket = () => {
       columnNumber: 13
     }
   }, bucket.map(e => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BucketRow__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    cloth: e.clothe,
-    key: e.clothe.id,
+    item: e,
+    key: e.uu_id,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1414,7 +1421,9 @@ var _jsxFileName = "/home/mj/pr/limak/src/components/bucket/BucketRow.jsx";
 
 
 
-const BucketRow = props => {
+const BucketRow = ({
+  item
+}) => {
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])(); //   console.log(props);
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1425,7 +1434,7 @@ const BucketRow = props => {
       lineNumber: 9,
       columnNumber: 5
     }
-  }, "Cras justo odio ", props.cloth.id, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, item.id, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "d-flex align-items-center",
     __self: undefined,
     __source: {
@@ -1434,8 +1443,8 @@ const BucketRow = props => {
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    class: "material-icons",
-    onClick: () => dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_2__["deleteFromBucket"])(props.cloth.id)),
+    class: "material-icons pointer",
+    onClick: () => dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_2__["deleteFromBucket"])(item.id)),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1748,7 +1757,7 @@ const ClothPage = props => {
     dispatch(Object(_actions_bucket__WEBPACK_IMPORTED_MODULE_4__["addToBucket"])({
       clothe,
       added: false,
-      id: react_uuid__WEBPACK_IMPORTED_MODULE_2___default()()
+      uu_id: react_uuid__WEBPACK_IMPORTED_MODULE_2___default()()
     }));
   };
 
@@ -1950,11 +1959,12 @@ const ClothPage = props => {
 /*!******************************************!*\
   !*** ./src/components/common/Footer.jsx ***!
   \******************************************/
-/*! exports provided: default */
+/*! exports provided: Footer, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
@@ -1964,122 +1974,116 @@ var _jsxFileName = "/home/mj/pr/limak/src/components/common/Footer.jsx";
 
 
 
-
-class Footer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "footer container-fluid",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9,
-        columnNumber: 7
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "row justify-content-center",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10,
-        columnNumber: 9
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "col-md-6 col-lg-7 col-xl-7 footer-links",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11,
-        columnNumber: 11
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "row",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12,
-        columnNumber: 13
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "/",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13,
-        columnNumber: 15
-      }
-    }, "\u0627\u06CC\u0646\u0633\u062A\u0627"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "/",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14,
-        columnNumber: 15
-      }
-    }, "\u062A\u0644\u06AF\u0631\u0627\u0645"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "/",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15,
-        columnNumber: 15
-      }
-    }, "\u062A\u0648\u06CC\u06CC\u062A\u0631")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "row",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17,
-        columnNumber: 13
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "/",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18,
-        columnNumber: 15
-      }
-    }, "\u0622\u062F\u0631\u0633 \u0641\u0631\u0648\u0634\u06AF\u0627\u0647\u200C\u0647\u0627"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "/",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19,
-        columnNumber: 15
-      }
-    }, "\u062A\u0645\u0627\u0633 \u0628\u0627\u0645\u0627"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "/",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20,
-        columnNumber: 15
-      }
-    }, "\u062F\u0631\u0628\u0627\u0631\u0647 \u0645\u0627"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "col-md-5 col-lg-4 col-xl-4",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23,
-        columnNumber: 11
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: _assets_img_footer_png__WEBPACK_IMPORTED_MODULE_2___default.a,
-      alt: "",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 13
-      }
-    }))));
-  }
-
-}
-
-const mapStateToProps = state => ({});
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {})(Footer));
+const Footer = () => {
+  const data = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.common.footer);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer container-fluid",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row justify-content-center",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-6 col-lg-7 col-xl-7 footer-links",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: data.instagram_id,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 13
+    }
+  }, "\u0627\u06CC\u0646\u0633\u062A\u0627"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: data.telegram_id,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 13
+    }
+  }, "\u062A\u0644\u06AF\u0631\u0627\u0645"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: data.twitter_id,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 13
+    }
+  }, "\u062A\u0648\u06CC\u06CC\u062A\u0631")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: data.address,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }, "\u0622\u062F\u0631\u0633 \u0641\u0631\u0648\u0634\u06AF\u0627\u0647\u200C\u0647\u0627"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: data.telephone_number,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, "\u062A\u0645\u0627\u0633 \u0628\u0627\u0645\u0627"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }, "\u062F\u0631\u0628\u0627\u0631\u0647 \u0645\u0627"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-5 col-lg-4 col-xl-4",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_img_footer_png__WEBPACK_IMPORTED_MODULE_2___default.a,
+    alt: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 11
+    }
+  }))));
+};
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
 
 /***/ }),
 
@@ -3510,7 +3514,7 @@ const initialState = {
 
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["ADD_BUCKET_TO_SERVER"]:
       return { ...state,
-        list: state.list.map(b => b.id === actions.payload.id ? actions.payload : b)
+        list: state.list.map(b => b.uu_id === actions.payload.uu_id ? actions.payload : b)
       };
 
     default:
@@ -3593,6 +3597,41 @@ const initialState = {
 
 /***/ }),
 
+/***/ "./src/reducers/commonReducer.js":
+/*!***************************************!*\
+  !*** ./src/reducers/commonReducer.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./src/actions/types.js");
+
+const initialState = {
+  footer: {
+    address: "",
+    telephone_number: "",
+    instagram_id: "",
+    telegram_id: "",
+    twitter_id: ""
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (function (state = initialState, actions) {
+  switch (actions.type) {
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["FOOTER"]:
+      return { ...state,
+        footer: actions.payload
+      };
+
+    default:
+      return { ...state
+      };
+  }
+});
+
+/***/ }),
+
 /***/ "./src/reducers/index.js":
 /*!*******************************!*\
   !*** ./src/reducers/index.js ***!
@@ -3607,6 +3646,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _clothReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./clothReducer */ "./src/reducers/clothReducer.js");
 /* harmony import */ var _bucketReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bucketReducer */ "./src/reducers/bucketReducer.js");
 /* harmony import */ var _storeReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storeReducer */ "./src/reducers/storeReducer.js");
+/* harmony import */ var _commonReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./commonReducer */ "./src/reducers/commonReducer.js");
+
 
 
 
@@ -3616,7 +3657,8 @@ const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"]
   auth: _authReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   cloth: _clothReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   bucket: _bucketReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  store: _storeReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
+  store: _storeReducer__WEBPACK_IMPORTED_MODULE_4__["default"],
+  common: _commonReducer__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 

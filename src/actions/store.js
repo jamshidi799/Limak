@@ -5,7 +5,7 @@ import { GET_CATEGORY, GET_COLOR, GET_SIZE, GET_KIND, FILTER } from "./types";
 
 export const getSizes = () => (dispatch, getState) => {
   axios
-    .get(`${SERVER_ADDRESS}/api/store/clothe-size`, tokenConfig(getState))
+    .get(`${SERVER_ADDRESS}/api/store/clothe-size`)
     .then((res) => {
       return dispatch({
         type: GET_SIZE,
@@ -17,7 +17,7 @@ export const getSizes = () => (dispatch, getState) => {
 
 export const getKinds = () => (dispatch, getState) => {
   axios
-    .get(`${SERVER_ADDRESS}/api/store/clothe-kind`, tokenConfig(getState))
+    .get(`${SERVER_ADDRESS}/api/store/clothe-kind`)
     .then((res) => {
       return dispatch({
         type: GET_KIND,
@@ -28,7 +28,7 @@ export const getKinds = () => (dispatch, getState) => {
 };
 export const getColors = () => (dispatch, getState) => {
   axios
-    .get(`${SERVER_ADDRESS}/api/store/clothe-color`, tokenConfig(getState))
+    .get(`${SERVER_ADDRESS}/api/store/clothe-color`)
     .then((res) => {
       return dispatch({
         type: GET_COLOR,
@@ -39,7 +39,7 @@ export const getColors = () => (dispatch, getState) => {
 };
 export const getCategory = () => (dispatch, getState) => {
   axios
-    .get(`${SERVER_ADDRESS}/api/store/category`, tokenConfig(getState))
+    .get(`${SERVER_ADDRESS}/api/store/category`)
     .then((res) => {
       return dispatch({
         type: GET_CATEGORY,

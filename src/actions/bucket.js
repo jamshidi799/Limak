@@ -9,7 +9,6 @@ import {
 import { tokenConfig } from "./auth";
 import { SERVER_ADDRESS } from "../consts";
 
-// GET POSTS
 export const getBucket = () => (dispatch, getState) => {
   axios
     .get(`${SERVER_ADDRESS}/api/store/basket`, tokenConfig(getState))
@@ -22,15 +21,6 @@ export const getBucket = () => (dispatch, getState) => {
     .catch((err) => console.log(err));
 };
 
-// DELETE POST
-export const deleteFromBucket = (id) => (dispatch, getState) => {
-  dispatch({
-    type: DELTE_FROM_BUCKET,
-    payload: id,
-  });
-};
-
-// ADD POST
 export const addToBucket = (data) => (dispatch, getState) => {
   const clothe = data.clothe;
   const request = {
@@ -46,12 +36,14 @@ export const addToBucket = (data) => (dispatch, getState) => {
       tokenConfig(getState)
     )
     .then((res) => {
+      console.log(res);
       dispatch({
         type: ADD_TO_BUCKET,
-        payload: { ...data, added: true },
+        payload: { ...data, added: true, id: res.data.id },
       });
     })
     .catch((err) => {
+      console.log(err);
       dispatch({
         type: ADD_TO_BUCKET,
         payload: data,
@@ -59,17 +51,42 @@ export const addToBucket = (data) => (dispatch, getState) => {
     });
 };
 
-export const addBucketToServer = (clothe) => (dispatch, getState) => {
+export const addBucketToServer = (item) => (dispatch, getState) => {
+  const data = {
+    clothe_uid: item.clothe.id,
+    color_name: item.clothe.information[0].color.name,
+    size_name: item.clothe.information[0].size.name,
+    count: 1,
+  };
+
   axios
-    .post(
-      `${SERVER_ADDRESS}/api/store/basket/add`,
-      clothe,
+    .post(`${SERVER_ADDRESS}/api/store/basket/add`, data, tokenConfig(getState))
+    .then((res) => {
+      return dispatch({
+        type: ADD_BUCKET_TO_SERVER,
+        payload: { ...item, added: true, id: res.data.id },
+      });
+    })
+    .catch((err) => console.log(err));
+};
+
+export const deleteFromBucket = (id) => (dispatch, getState) => {
+  // const data = {
+  //   clothe_uid: item.clothe.id,
+  //   color_name: item.clothe.information[0].color.name,
+  //   size_name: item.clothe.information[0].size.name,
+  //   count: 1,
+  // };
+
+  axios
+    .delete(
+      `${SERVER_ADDRESS}/api/store/basket/edit/${id}`,
       tokenConfig(getState)
     )
     .then((res) => {
       return dispatch({
-        type: ADD_BUCKET_TO_SERVER,
-        payload: res.data,
+        type: DELTE_FROM_BUCKET,
+        payload: id,
       });
     })
     .catch((err) => console.log(err));

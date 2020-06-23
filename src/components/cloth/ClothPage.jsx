@@ -19,7 +19,7 @@ const ClothPage = (props) => {
   }, []);
 
   const onBuy = () => {
-    dispatch(addToBucket({ clothe, added: false, id: uuid() }));
+    dispatch(addToBucket({ clothe, added: false, uu_id: uuid() }));
   };
 
   return (

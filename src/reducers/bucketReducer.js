@@ -31,7 +31,7 @@ export default function (state = initialState, actions) {
       return {
         ...state,
         list: state.list.map((b) =>
-          b.id === actions.payload.id ? actions.payload : b
+          b.uu_id === actions.payload.uu_id ? actions.payload : b
         ),
       };
     default:

@@ -5,7 +5,7 @@ import { GET_CLOTHS, GET_CLOTH_BY_ID, FILTER, QUERY } from "./types";
 
 export const getAllCloths = () => (dispatch, getState) => {
   axios
-    .get(`${SERVER_ADDRESS}/api/store/store_page`, tokenConfig(getState))
+    .get(`${SERVER_ADDRESS}/api/store/store_page`)
     .then((res) => {
       return dispatch({
         type: GET_CLOTHS,
@@ -17,7 +17,7 @@ export const getAllCloths = () => (dispatch, getState) => {
 
 export const getClothById = (id) => (dispatch, getState) => {
   axios
-    .get(`${SERVER_ADDRESS}/api/store/clothe/${id}`, tokenConfig(getState))
+    .get(`${SERVER_ADDRESS}/api/store/clothe/${id}`)
     .then((res) => {
       return dispatch({
         type: GET_CLOTH_BY_ID,
@@ -29,11 +29,7 @@ export const getClothById = (id) => (dispatch, getState) => {
 
 export const filter = (query, pagination) => (dispatch, getState) => {
   axios
-    .post(
-      `${SERVER_ADDRESS}/api/store/store_page?page=${pagination}`,
-      query,
-      tokenConfig(getState)
-    )
+    .post(`${SERVER_ADDRESS}/api/store/store_page?page=${pagination}`, query)
     .then((res) => {
       dispatch({
         type: FILTER,

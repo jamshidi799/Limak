@@ -25,19 +25,17 @@ export default function Direction() {
 
   useEffect(() => {
     bucket.forEach((item) => {
-      const data = {
-        clothe_uid: item.clothe.id,
-        color_name: item.clothe.information[0].color.name,
-        size_name: item.clothe.information[0].size.name,
-        count: 1,
-      };
-      dispatch(addBucketToServer(data));
+      if (!item.added) {
+        dispatch(addBucketToServer(item));
+      }
     });
   }, [isAuthenticated]);
 
-  if (shouldRedirect) {
-    return <Redirect to="./login" />;
-  }
+  // if (shouldRedirect) {
+  //   setTimeout(() => {
+  //     return <Redirect to="./store/1" />;
+  //   }, 1000);
+  // }
 
   return (
     <div className="container login-form">
