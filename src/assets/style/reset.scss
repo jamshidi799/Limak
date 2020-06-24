@@ -1,3 +1,4 @@
+@import "./variables.scss";
 @font-face {
   font-family: IRANYekan;
   src: url("/assets/fonts/IRANYekan.ttf");
@@ -43,6 +44,18 @@ a {
       display: inline-block;
       padding: 15px;
       font-size: x-large;
+    }
+  }
+}
+
+.custom-navber {
+  background-color: black;
+  .nav-item {
+    .nav-link {
+      &:visited {
+        color: black;
+      }
+      color: $yellow;
     }
   }
 }

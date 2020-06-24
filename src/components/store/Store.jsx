@@ -23,9 +23,10 @@ const Store = (props) => {
       <div className="container">
         <div className="store-header">
           <div className="row justify-content-between">
-            <h2 className="col">کمپانی لیماک</h2>
-            <h2 className="col text-center">فروشگاه</h2>
-            <div className="col">
+            <h2 className="col-4  ">کمپانی لیماک</h2>
+            <h2 className="col-4 text-center">فروشگاه</h2>
+            <div className="col-1"></div>
+            <div className="col-3">
               <h2 className="text-center">سبد خرید</h2>
               <div className="row justify-content-between">
                 <div className="col-4 pr-0">
