@@ -55,5 +55,5 @@ cypress/screenshots/
 cypress/videos/
 cacert
 
-devBuild
+# devBuild
 build

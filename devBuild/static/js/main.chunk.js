@@ -4035,5 +4035,5 @@ module.exports = __webpack_require__(/*! /home/mj/pr/limak/src/index.js */"./src
 
 /***/ })
 
-},[[1,"runtime-main",1]]]);
+},[[1,"runtime-main",0]]]);
 //# sourceMappingURL=main.chunk.js.map
