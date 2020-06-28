@@ -6,6 +6,7 @@ import {
   GET_CATEGORY,
   GET_COLOR,
   FILTER,
+  DECREASE_FROM_STORE,
 } from "../actions/types";
 
 const initialState = {
@@ -65,6 +66,17 @@ export default function (state = initialState, actions) {
       return {
         ...state,
         clothe: actions.payload.clothe,
+      };
+    case DECREASE_FROM_STORE:
+      return {
+        ...state,
+        clothe: {
+          ...state.clothe,
+          information: {
+            ...state.clothe.information,
+            count: state.clothe.information.count - 1,
+          },
+        },
       };
     default:
       return { ...state };

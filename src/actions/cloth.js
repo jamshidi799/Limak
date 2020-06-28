@@ -1,7 +1,13 @@
 import axios from "axios";
 import { tokenConfig } from "./auth";
 import { SERVER_ADDRESS } from "../consts";
-import { GET_CLOTHS, GET_CLOTH_BY_ID, FILTER, QUERY } from "./types";
+import {
+  GET_CLOTHS,
+  GET_CLOTH_BY_ID,
+  FILTER,
+  QUERY,
+  DECREASE_FROM_STORE,
+} from "./types";
 
 export const getAllCloths = () => (dispatch, getState) => {
   axios
@@ -28,6 +34,7 @@ export const getClothById = (id) => (dispatch, getState) => {
 };
 
 export const filter = (query, pagination) => (dispatch, getState) => {
+  // alert.show("hello");
   axios
     .post(`${SERVER_ADDRESS}/api/store/store_page?page=${pagination}`, query)
     .then((res) => {
@@ -41,4 +48,11 @@ export const filter = (query, pagination) => (dispatch, getState) => {
       });
     })
     .catch((err) => console.log(err));
+};
+
+export const reduceFromStore = (id) => (dispatch, getState) => {
+  return dispatch({
+    type: DECREASE_FROM_STORE,
+    payload: id,
+  });
 };

@@ -25,10 +25,11 @@ export const addToBucket = (data) => (dispatch, getState) => {
   const clothe = data.clothe;
   const request = {
     clothe_uid: clothe.id,
-    color_name: clothe.information[0].color.name,
-    size_name: clothe.information[0].size.name,
+    color_name: clothe.information.color.name,
+    size_name: clothe.information.size.name,
     count: 1,
   };
+
   axios
     .post(
       `${SERVER_ADDRESS}/api/store/basket/add`,
@@ -54,8 +55,8 @@ export const addToBucket = (data) => (dispatch, getState) => {
 export const addBucketToServer = (item) => (dispatch, getState) => {
   const data = {
     clothe_uid: item.clothe.id,
-    color_name: item.clothe.information[0].color.name,
-    size_name: item.clothe.information[0].size.name,
+    color_name: item.clothe.information.color.name,
+    size_name: item.clothe.information.size.name,
     count: 1,
   };
 

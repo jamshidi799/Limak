@@ -11,8 +11,8 @@ const Bucket = () => {
     bucket.forEach((item) => {
       const data = {
         clothe_uid: item.clothe.id,
-        color_name: item.clothe.information[0].color.name,
-        size_name: item.clothe.information[0].size.name,
+        color_name: item.clothe.information.color.name,
+        size_name: item.clothe.information.size.name,
         count: 1,
       };
       console.log(data);

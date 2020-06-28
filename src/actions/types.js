@@ -13,6 +13,7 @@ export const DELTE_FROM_BUCKET = "DELTE_FROM_BUCKET";
 export const GET_BUCKET = "GET_BUCKET";
 export const PAY_BUCKET = "PAY_BUCKET";
 export const ADD_BUCKET_TO_SERVER = "ADD_BUCKET_TO_SERVER";
+export const DECREASE_FROM_STORE = "DECREASE_FROM_STORE";
 
 export const GET_CLOTHS = "GET_CLOTHS";
 export const GET_CLOTH_BY_ID = "GET_CLOTH_BY_ID";
