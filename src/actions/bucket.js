@@ -27,7 +27,7 @@ export const addToBucket = (data) => (dispatch, getState) => {
     clothe_uid: clothe.id,
     color_name: clothe.information.color.name,
     size_name: clothe.information.size.name,
-    count: 1,
+    count: data.count,
   };
 
   axios

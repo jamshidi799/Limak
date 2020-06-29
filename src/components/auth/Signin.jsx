@@ -20,6 +20,11 @@ export default function Direction() {
     e.preventDefault();
     const { username, password } = state;
     dispatch(login(username, password));
+    if (isAuthenticated) {
+      setTimeout(() => {
+        setShouldRedirect(true);
+      }, 2000);
+    }
     setShouldRedirect(true);
   };
 
@@ -31,11 +36,9 @@ export default function Direction() {
     });
   }, [isAuthenticated]);
 
-  // if (shouldRedirect) {
-  //   setTimeout(() => {
-  //     return <Redirect to="./store/1" />;
-  //   }, 1000);
-  // }
+  if (shouldRedirect) {
+    return <Redirect to="./store/1" />;
+  }
 
   return (
     <div className="container login-form">

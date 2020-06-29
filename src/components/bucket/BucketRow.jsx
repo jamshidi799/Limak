@@ -18,7 +18,7 @@ const BucketRow = ({ item }) => {
         >
           delete
         </i>
-        <span className="badge badge-warning badge-pill">14</span>
+        <span className="badge badge-warning badge-pill">{item.count}</span>
       </div>
     </li>
   );

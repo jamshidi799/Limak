@@ -33,16 +33,18 @@ function App() {
       <AlertProvider template={AlertTemplate} {...options}>
         <BrowserRouter>
           <Navbar />
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/register" component={Signup} />
-            <Route exact path="/login" component={Signin} />
-            <Route exact path="/resetpass" component={ResetPassword} />
-            <Route exact path="/store/:pagination" component={Store} />
-            <Route exact path="/cloth/:id" component={ClothPage} />
-          </Switch>
+          <div className="page-wrapper">
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/register" component={Signup} />
+              <Route exact path="/login" component={Signin} />
+              <Route exact path="/resetpass" component={ResetPassword} />
+              <Route exact path="/store/:pagination" component={Store} />
+              <Route exact path="/cloth/:id" component={ClothPage} />
+            </Switch>
+            <Footer />
+          </div>
           <Bucket />
-          <Footer />
         </BrowserRouter>
       </AlertProvider>
     </Provider>

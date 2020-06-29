@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import uuid from "react-uuid";
 import { useAlert } from "react-alert";
+import axios from "axios";
 
+import { SERVER_ADDRESS } from "../../consts";
 import ClothHorizentalContainer from "./ClothHorizentalContainer";
 import Bucket from "../bucket/Bucket";
 import { addToBucket } from "../../actions/bucket";
@@ -12,12 +14,16 @@ import {
   reduceFromStore,
 } from "../../actions/cloth";
 import cloth_img from "../../assets/img/hoody.jpeg";
+import arrow from "../../assets/img/arrow.png";
 
 const ClothPage = (props) => {
   const cloths = useSelector((state) => state.cloth.clothes).slice(0, 4);
   const clothe = useSelector((state) => state.cloth.clothe);
   const bucketLength = useSelector((state) => state.bucket.list.length);
   const dispatch = useDispatch();
+  const [similarCat, setSimilarCat] = useState();
+  const [similarKind, setSimilarKind] = useState();
+  const [count, setCount] = useState(0);
   const id = props.match.params.id;
 
   const alert = useAlert();
@@ -25,10 +31,45 @@ const ClothPage = (props) => {
   useEffect(() => {
     dispatch(getClothById(id));
     dispatch(getAllCloths());
+
+    getSimilarCategory();
+    getSimilarKind();
   }, []);
 
+  const getSimilarCategory = () => {
+    const query = {
+      kind: [],
+      color: [],
+      size: [],
+      category: [clothe.category],
+    };
+    axios
+      .post(`${SERVER_ADDRESS}/api/store/store_page?page=${1}`, query)
+      .then((res) => {
+        setSimilarCat(res.data.results.clothes);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const getSimilarKind = () => {
+    const query = {
+      kind: [clothe.kind],
+      color: [],
+      size: [],
+      category: [],
+    };
+    axios
+      .post(`${SERVER_ADDRESS}/api/store/store_page?page=${1}`, query)
+      .then((res) => {
+        setSimilarKind(res.data.results.clothes);
+      })
+      .catch((err) => console.log(err));
+  };
+
   const onBuy = () => {
-    dispatch(addToBucket({ clothe, added: false, uu_id: uuid() }));
+    dispatch(
+      addToBucket({ clothe, count: count, added: false, uu_id: uuid() })
+    );
     dispatch(reduceFromStore(clothe.id));
     setTimeout(() => {
       alert.show("کالا به سبد اضافه شد");
@@ -76,8 +117,31 @@ const ClothPage = (props) => {
             <br />
             <div className="wrapper">
               {clothe.information && clothe.information.count > 0 ? (
-                <div className="buy-btn" onClick={onBuy}>
-                  <h3 className="text-center">اضافه به سبد خرید</h3>
+                <div className="buy-btn">
+                  <h3 className="text-center cta" onClick={onBuy}>
+                    اضافه به سبد خرید
+                  </h3>
+                  <div className="count">
+                    <i
+                      class="material-icons pointer"
+                      onClick={() =>
+                        count === clothe.information.count
+                          ? setCount(count)
+                          : setCount(count + 1)
+                      }
+                    >
+                      arrow_upward
+                    </i>
+                    <span>{count}</span>
+                    <i
+                      class="material-icons pointer"
+                      onClick={() =>
+                        count > 0 ? setCount(count - 1) : setCount(0)
+                      }
+                    >
+                      arrow_downward
+                    </i>
+                  </div>
                 </div>
               ) : (
                 <div className="buy-btn disable" onClick={onClothCountZero}>
@@ -96,57 +160,11 @@ const ClothPage = (props) => {
       <br />
       <div>
         <h1 className="text-center text-lg-right mb-3 yellow">از این مجموعه</h1>
-        <ClothHorizentalContainer cloths={cloths} />
+        <ClothHorizentalContainer cloths={similarCat} />
       </div>
       <div className="mt-3 mb-3">
-        <h1 className="text-center text-lg-right mb-4 yellow">
-          پیشنهاد شما سروران
-        </h1>
-        <ClothHorizentalContainer cloths={cloths} />
-      </div>
-      <div>
-        <Bucket />
-      </div>
-      <div>
-        <div
-          class="modal fade"
-          id="bucket-success-modal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Modal title
-                </h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">...</div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 className="text-center text-lg-right mb-4 yellow">از این نوع</h1>
+        <ClothHorizentalContainer cloths={similarKind} />
       </div>
     </div>
   );
